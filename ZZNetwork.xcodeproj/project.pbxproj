@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9985CDB20BBE58600BEEDA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CDA20BBE58600BEEDA3 /* AppDelegate.m */; };
+		C9985CDE20BBE58600BEEDA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CDD20BBE58600BEEDA3 /* ViewController.m */; };
+		C9985CE120BBE58600BEEDA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9985CDF20BBE58600BEEDA3 /* Main.storyboard */; };
+		C9985CE320BBE58600BEEDA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9985CE220BBE58600BEEDA3 /* Assets.xcassets */; };
+		C9985CE620BBE58600BEEDA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9985CE420BBE58600BEEDA3 /* LaunchScreen.storyboard */; };
+		C9985CE920BBE58600BEEDA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CE820BBE58600BEEDA3 /* main.m */; };
+		C9985CF320BBE58700BEEDA3 /* ZZNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CF220BBE58700BEEDA3 /* ZZNetworkTests.m */; };
+		C9985CFE20BBE58700BEEDA3 /* ZZNetworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CFD20BBE58700BEEDA3 /* ZZNetworkUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9985CEF20BBE58700BEEDA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9985CCE20BBE58600BEEDA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9985CD520BBE58600BEEDA3;
+			remoteInfo = ZZNetwork;
+		};
+		C9985CFA20BBE58700BEEDA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9985CCE20BBE58600BEEDA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9985CD520BBE58600BEEDA3;
+			remoteInfo = ZZNetwork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C9985CD620BBE58600BEEDA3 /* ZZNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9985CD920BBE58600BEEDA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C9985CDA20BBE58600BEEDA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C9985CDC20BBE58600BEEDA3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C9985CDD20BBE58600BEEDA3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C9985CE020BBE58600BEEDA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9985CE220BBE58600BEEDA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9985CE520BBE58600BEEDA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9985CE720BBE58600BEEDA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9985CE820BBE58600BEEDA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9985CEE20BBE58700BEEDA3 /* ZZNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9985CF220BBE58700BEEDA3 /* ZZNetworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZNetworkTests.m; sourceTree = "<group>"; };
+		C9985CF420BBE58700BEEDA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9985CF920BBE58700BEEDA3 /* ZZNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9985CFD20BBE58700BEEDA3 /* ZZNetworkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZNetworkUITests.m; sourceTree = "<group>"; };
+		C9985CFF20BBE58700BEEDA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9985CD320BBE58600BEEDA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9985CEB20BBE58700BEEDA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9985CF620BBE58700BEEDA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9985CCD20BBE58600BEEDA3 = {
+			isa = PBXGroup;
+			children = (
+				C9985CD820BBE58600BEEDA3 /* ZZNetwork */,
+				C9985CF120BBE58700BEEDA3 /* ZZNetworkTests */,
+				C9985CFC20BBE58700BEEDA3 /* ZZNetworkUITests */,
+				C9985CD720BBE58600BEEDA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9985CD720BBE58600BEEDA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9985CD620BBE58600BEEDA3 /* ZZNetwork.app */,
+				C9985CEE20BBE58700BEEDA3 /* ZZNetworkTests.xctest */,
+				C9985CF920BBE58700BEEDA3 /* ZZNetworkUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9985CD820BBE58600BEEDA3 /* ZZNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				C9985CD920BBE58600BEEDA3 /* AppDelegate.h */,
+				C9985CDA20BBE58600BEEDA3 /* AppDelegate.m */,
+				C9985CDC20BBE58600BEEDA3 /* ViewController.h */,
+				C9985CDD20BBE58600BEEDA3 /* ViewController.m */,
+				C9985CDF20BBE58600BEEDA3 /* Main.storyboard */,
+				C9985CE220BBE58600BEEDA3 /* Assets.xcassets */,
+				C9985CE420BBE58600BEEDA3 /* LaunchScreen.storyboard */,
+				C9985CE720BBE58600BEEDA3 /* Info.plist */,
+				C9985CE820BBE58600BEEDA3 /* main.m */,
+			);
+			path = ZZNetwork;
+			sourceTree = "<group>";
+		};
+		C9985CF120BBE58700BEEDA3 /* ZZNetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9985CF220BBE58700BEEDA3 /* ZZNetworkTests.m */,
+				C9985CF420BBE58700BEEDA3 /* Info.plist */,
+			);
+			path = ZZNetworkTests;
+			sourceTree = "<group>";
+		};
+		C9985CFC20BBE58700BEEDA3 /* ZZNetworkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9985CFD20BBE58700BEEDA3 /* ZZNetworkUITests.m */,
+				C9985CFF20BBE58700BEEDA3 /* Info.plist */,
+			);
+			path = ZZNetworkUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9985CD520BBE58600BEEDA3 /* ZZNetwork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9985D0220BBE58700BEEDA3 /* Build configuration list for PBXNativeTarget "ZZNetwork" */;
+			buildPhases = (
+				C9985CD220BBE58600BEEDA3 /* Sources */,
+				C9985CD320BBE58600BEEDA3 /* Frameworks */,
+				C9985CD420BBE58600BEEDA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZZNetwork;
+			productName = ZZNetwork;
+			productReference = C9985CD620BBE58600BEEDA3 /* ZZNetwork.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9985CED20BBE58700BEEDA3 /* ZZNetworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9985D0520BBE58700BEEDA3 /* Build configuration list for PBXNativeTarget "ZZNetworkTests" */;
+			buildPhases = (
+				C9985CEA20BBE58700BEEDA3 /* Sources */,
+				C9985CEB20BBE58700BEEDA3 /* Frameworks */,
+				C9985CEC20BBE58700BEEDA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9985CF020BBE58700BEEDA3 /* PBXTargetDependency */,
+			);
+			name = ZZNetworkTests;
+			productName = ZZNetworkTests;
+			productReference = C9985CEE20BBE58700BEEDA3 /* ZZNetworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9985CF820BBE58700BEEDA3 /* ZZNetworkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9985D0820BBE58700BEEDA3 /* Build configuration list for PBXNativeTarget "ZZNetworkUITests" */;
+			buildPhases = (
+				C9985CF520BBE58700BEEDA3 /* Sources */,
+				C9985CF620BBE58700BEEDA3 /* Frameworks */,
+				C9985CF720BBE58700BEEDA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9985CFB20BBE58700BEEDA3 /* PBXTargetDependency */,
+			);
+			name = ZZNetworkUITests;
+			productName = ZZNetworkUITests;
+			productReference = C9985CF920BBE58700BEEDA3 /* ZZNetworkUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9985CCE20BBE58600BEEDA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "郑来贤";
+				TargetAttributes = {
+					C9985CD520BBE58600BEEDA3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					C9985CED20BBE58700BEEDA3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C9985CD520BBE58600BEEDA3;
+					};
+					C9985CF820BBE58700BEEDA3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C9985CD520BBE58600BEEDA3;
+					};
+				};
+			};
+			buildConfigurationList = C9985CD120BBE58600BEEDA3 /* Build configuration list for PBXProject "ZZNetwork" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9985CCD20BBE58600BEEDA3;
+			productRefGroup = C9985CD720BBE58600BEEDA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9985CD520BBE58600BEEDA3 /* ZZNetwork */,
+				C9985CED20BBE58700BEEDA3 /* ZZNetworkTests */,
+				C9985CF820BBE58700BEEDA3 /* ZZNetworkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9985CD420BBE58600BEEDA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9985CE620BBE58600BEEDA3 /* LaunchScreen.storyboard in Resources */,
+				C9985CE320BBE58600BEEDA3 /* Assets.xcassets in Resources */,
+				C9985CE120BBE58600BEEDA3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9985CEC20BBE58700BEEDA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9985CF720BBE58700BEEDA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9985CD220BBE58600BEEDA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9985CDE20BBE58600BEEDA3 /* ViewController.m in Sources */,
+				C9985CE920BBE58600BEEDA3 /* main.m in Sources */,
+				C9985CDB20BBE58600BEEDA3 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9985CEA20BBE58700BEEDA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9985CF320BBE58700BEEDA3 /* ZZNetworkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9985CF520BBE58700BEEDA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9985CFE20BBE58700BEEDA3 /* ZZNetworkUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9985CF020BBE58700BEEDA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9985CD520BBE58600BEEDA3 /* ZZNetwork */;
+			targetProxy = C9985CEF20BBE58700BEEDA3 /* PBXContainerItemProxy */;
+		};
+		C9985CFB20BBE58700BEEDA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9985CD520BBE58600BEEDA3 /* ZZNetwork */;
+			targetProxy = C9985CFA20BBE58700BEEDA3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9985CDF20BBE58600BEEDA3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9985CE020BBE58600BEEDA3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9985CE420BBE58600BEEDA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9985CE520BBE58600BEEDA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9985D0020BBE58700BEEDA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C9985D0120BBE58700BEEDA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9985D0320BBE58700BEEDA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U55NXTTPH7;
+				INFOPLIST_FILE = ZZNetwork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sjyr.ZZNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C9985D0420BBE58700BEEDA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U55NXTTPH7;
+				INFOPLIST_FILE = ZZNetwork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sjyr.ZZNetwork;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C9985D0620BBE58700BEEDA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U55NXTTPH7;
+				INFOPLIST_FILE = ZZNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sjyr.ZZNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZNetwork.app/ZZNetwork";
+			};
+			name = Debug;
+		};
+		C9985D0720BBE58700BEEDA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U55NXTTPH7;
+				INFOPLIST_FILE = ZZNetworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sjyr.ZZNetworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZNetwork.app/ZZNetwork";
+			};
+			name = Release;
+		};
+		C9985D0920BBE58700BEEDA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U55NXTTPH7;
+				INFOPLIST_FILE = ZZNetworkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sjyr.ZZNetworkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZZNetwork;
+			};
+			name = Debug;
+		};
+		C9985D0A20BBE58700BEEDA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U55NXTTPH7;
+				INFOPLIST_FILE = ZZNetworkUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sjyr.ZZNetworkUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZZNetwork;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9985CD120BBE58600BEEDA3 /* Build configuration list for PBXProject "ZZNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9985D0020BBE58700BEEDA3 /* Debug */,
+				C9985D0120BBE58700BEEDA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9985D0220BBE58700BEEDA3 /* Build configuration list for PBXNativeTarget "ZZNetwork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9985D0320BBE58700BEEDA3 /* Debug */,
+				C9985D0420BBE58700BEEDA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9985D0520BBE58700BEEDA3 /* Build configuration list for PBXNativeTarget "ZZNetworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9985D0620BBE58700BEEDA3 /* Debug */,
+				C9985D0720BBE58700BEEDA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9985D0820BBE58700BEEDA3 /* Build configuration list for PBXNativeTarget "ZZNetworkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9985D0920BBE58700BEEDA3 /* Debug */,
+				C9985D0A20BBE58700BEEDA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9985CCE20BBE58600BEEDA3 /* Project object */;
+}
