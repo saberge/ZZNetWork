@@ -16,7 +16,6 @@
 		C9985CE920BBE58600BEEDA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CE820BBE58600BEEDA3 /* main.m */; };
 		C9985CF320BBE58700BEEDA3 /* ZZNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CF220BBE58700BEEDA3 /* ZZNetworkTests.m */; };
 		C9985CFE20BBE58700BEEDA3 /* ZZNetworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CFD20BBE58700BEEDA3 /* ZZNetworkUITests.m */; };
-		C9985D1220BBEE1000BEEDA3 /* ZZRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985D1120BBEE1000BEEDA3 /* ZZRequest.m */; };
 		C99BD5D120BD12E3005A6E4A /* WeatherApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C99BD5D020BD12E3005A6E4A /* WeatherApi.m */; };
 		C99BD5D420BD130F005A6E4A /* WeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C99BD5D320BD130F005A6E4A /* WeatherInfo.m */; };
 /* End PBXBuildFile section */
@@ -63,6 +62,7 @@
 		C99BD5D020BD12E3005A6E4A /* WeatherApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherApi.m; sourceTree = "<group>"; };
 		C99BD5D220BD130F005A6E4A /* WeatherInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherInfo.h; sourceTree = "<group>"; };
 		C99BD5D320BD130F005A6E4A /* WeatherInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherInfo.m; sourceTree = "<group>"; };
+		C99BD5D520BD3236005A6E4A /* ZZNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZNetwork.h; sourceTree = "<group>"; };
 		C9AD0D8F20BC0E8800C365B4 /* ZZProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZProtocol.h; sourceTree = "<group>"; };
 		F8DEBCCD17DD6C69035A99D2 /* libPods-ZZNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZZNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -166,6 +166,7 @@
 		C9985D0B20BBEA3500BEEDA3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C99BD5D520BD3236005A6E4A /* ZZNetwork.h */,
 				C9985D0C20BBEDC000BEEDA3 /* ZZRequest */,
 			);
 			path = Classes;
@@ -349,7 +350,6 @@
 				C9985CDB20BBE58600BEEDA3 /* AppDelegate.m in Sources */,
 				C99BD5D120BD12E3005A6E4A /* WeatherApi.m in Sources */,
 				C99BD5D420BD130F005A6E4A /* WeatherInfo.m in Sources */,
-				C9985D1220BBEE1000BEEDA3 /* ZZRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

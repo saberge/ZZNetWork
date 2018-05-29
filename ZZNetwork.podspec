@@ -64,8 +64,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-    s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  # s.platform     = :ios
+    s.platform     = :ios, "7.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -91,10 +91,10 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+    s.source_files  = "Classes", "ZZNetwork/Classes/ZZNetwork.h"
+    s.exclude_files = "Classes/Exclude"
 
-  # s.public_header_files = "Classes/**/*.h"
+    s.public_header_files = "ZZNetwork/Classes/ZZNetwork.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -133,6 +133,8 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-    s.dependency "AFNetworking", "~> 3.2.1"
-
+    s.subspec 'ZZRequest' do |zz|
+        zz.source_files ='ZZNetwork/Classes/ZZRequest/*.{h,m}'
+        s.dependency "AFNetworking", "~> 3.2.1"
+    end
 end

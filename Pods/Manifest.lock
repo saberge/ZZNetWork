@@ -16,6 +16,9 @@ PODS:
     - AFNetworking/NSURLSession
   - ZZNetwork (1.0.0):
     - AFNetworking (~> 3.2.1)
+    - ZZNetwork/ZZRequest (= 1.0.0)
+  - ZZNetwork/ZZRequest (1.0.0):
+    - AFNetworking (~> 3.2.1)
 
 DEPENDENCIES:
   - ZZNetwork (from `./ZZNetwork.podspec`)
@@ -30,7 +33,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  ZZNetwork: 0b89ab388a2fd663d31baf57a8d9ed6b69465cec
+  ZZNetwork: 2a1402bf7d435ce17944c5db19ba26a1553ee96e
 
 PODFILE CHECKSUM: 779771bbefa90ebab03c5ed1852d5af4f921d257
 
