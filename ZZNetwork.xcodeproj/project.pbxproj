@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBCFA39181AACA83C35A42C1 /* libPods-ZZNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DEBCCD17DD6C69035A99D2 /* libPods-ZZNetwork.a */; };
 		C9985CDB20BBE58600BEEDA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CDA20BBE58600BEEDA3 /* AppDelegate.m */; };
 		C9985CDE20BBE58600BEEDA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CDD20BBE58600BEEDA3 /* ViewController.m */; };
 		C9985CE120BBE58600BEEDA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9985CDF20BBE58600BEEDA3 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 		C9985CE920BBE58600BEEDA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CE820BBE58600BEEDA3 /* main.m */; };
 		C9985CF320BBE58700BEEDA3 /* ZZNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CF220BBE58700BEEDA3 /* ZZNetworkTests.m */; };
 		C9985CFE20BBE58700BEEDA3 /* ZZNetworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CFD20BBE58700BEEDA3 /* ZZNetworkUITests.m */; };
+		C9985D1220BBEE1000BEEDA3 /* ZZRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985D1120BBEE1000BEEDA3 /* ZZRequest.m */; };
+		C99BD5D120BD12E3005A6E4A /* WeatherApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C99BD5D020BD12E3005A6E4A /* WeatherApi.m */; };
+		C99BD5D420BD130F005A6E4A /* WeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C99BD5D320BD130F005A6E4A /* WeatherInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		78868473D90CE2E6C7FA5B46 /* Pods-ZZNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZZNetwork/Pods-ZZNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		B382967DB035BAC81E495B09 /* Pods-ZZNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZZNetwork/Pods-ZZNetwork.release.xcconfig"; sourceTree = "<group>"; };
 		C9985CD620BBE58600BEEDA3 /* ZZNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9985CD920BBE58600BEEDA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9985CDA20BBE58600BEEDA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +57,14 @@
 		C9985CF920BBE58700BEEDA3 /* ZZNetworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZNetworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9985CFD20BBE58700BEEDA3 /* ZZNetworkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZNetworkUITests.m; sourceTree = "<group>"; };
 		C9985CFF20BBE58700BEEDA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9985D1020BBEE1000BEEDA3 /* ZZRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZRequest.h; sourceTree = "<group>"; };
+		C9985D1120BBEE1000BEEDA3 /* ZZRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZRequest.m; sourceTree = "<group>"; };
+		C99BD5CF20BD12E3005A6E4A /* WeatherApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherApi.h; sourceTree = "<group>"; };
+		C99BD5D020BD12E3005A6E4A /* WeatherApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherApi.m; sourceTree = "<group>"; };
+		C99BD5D220BD130F005A6E4A /* WeatherInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherInfo.h; sourceTree = "<group>"; };
+		C99BD5D320BD130F005A6E4A /* WeatherInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherInfo.m; sourceTree = "<group>"; };
+		C9AD0D8F20BC0E8800C365B4 /* ZZProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZProtocol.h; sourceTree = "<group>"; };
+		F8DEBCCD17DD6C69035A99D2 /* libPods-ZZNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZZNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCFA39181AACA83C35A42C1 /* libPods-ZZNetwork.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD003B625CE6786C33DB6200 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78868473D90CE2E6C7FA5B46 /* Pods-ZZNetwork.debug.xcconfig */,
+				B382967DB035BAC81E495B09 /* Pods-ZZNetwork.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C9985CCD20BBE58600BEEDA3 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +109,8 @@
 				C9985CF120BBE58700BEEDA3 /* ZZNetworkTests */,
 				C9985CFC20BBE58700BEEDA3 /* ZZNetworkUITests */,
 				C9985CD720BBE58600BEEDA3 /* Products */,
+				BD003B625CE6786C33DB6200 /* Pods */,
+				EA72F262A12023AD990FCF9C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +131,11 @@
 				C9985CDA20BBE58600BEEDA3 /* AppDelegate.m */,
 				C9985CDC20BBE58600BEEDA3 /* ViewController.h */,
 				C9985CDD20BBE58600BEEDA3 /* ViewController.m */,
+				C99BD5CF20BD12E3005A6E4A /* WeatherApi.h */,
+				C99BD5D020BD12E3005A6E4A /* WeatherApi.m */,
+				C99BD5D220BD130F005A6E4A /* WeatherInfo.h */,
+				C99BD5D320BD130F005A6E4A /* WeatherInfo.m */,
+				C9985D0B20BBEA3500BEEDA3 /* Classes */,
 				C9985CDF20BBE58600BEEDA3 /* Main.storyboard */,
 				C9985CE220BBE58600BEEDA3 /* Assets.xcassets */,
 				C9985CE420BBE58600BEEDA3 /* LaunchScreen.storyboard */,
@@ -132,6 +163,32 @@
 			path = ZZNetworkUITests;
 			sourceTree = "<group>";
 		};
+		C9985D0B20BBEA3500BEEDA3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C9985D0C20BBEDC000BEEDA3 /* ZZRequest */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C9985D0C20BBEDC000BEEDA3 /* ZZRequest */ = {
+			isa = PBXGroup;
+			children = (
+				C9985D1020BBEE1000BEEDA3 /* ZZRequest.h */,
+				C9985D1120BBEE1000BEEDA3 /* ZZRequest.m */,
+				C9AD0D8F20BC0E8800C365B4 /* ZZProtocol.h */,
+			);
+			path = ZZRequest;
+			sourceTree = "<group>";
+		};
+		EA72F262A12023AD990FCF9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8DEBCCD17DD6C69035A99D2 /* libPods-ZZNetwork.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +196,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9985D0220BBE58700BEEDA3 /* Build configuration list for PBXNativeTarget "ZZNetwork" */;
 			buildPhases = (
+				09913DBC2FF2BF632250C73D /* [CP] Check Pods Manifest.lock */,
 				C9985CD220BBE58600BEEDA3 /* Sources */,
 				C9985CD320BBE58600BEEDA3 /* Frameworks */,
 				C9985CD420BBE58600BEEDA3 /* Resources */,
@@ -260,6 +318,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09913DBC2FF2BF632250C73D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZZNetwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9985CD220BBE58600BEEDA3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -268,6 +347,9 @@
 				C9985CDE20BBE58600BEEDA3 /* ViewController.m in Sources */,
 				C9985CE920BBE58600BEEDA3 /* main.m in Sources */,
 				C9985CDB20BBE58600BEEDA3 /* AppDelegate.m in Sources */,
+				C99BD5D120BD12E3005A6E4A /* WeatherApi.m in Sources */,
+				C99BD5D420BD130F005A6E4A /* WeatherInfo.m in Sources */,
+				C9985D1220BBEE1000BEEDA3 /* ZZRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +510,7 @@
 		};
 		C9985D0320BBE58700BEEDA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78868473D90CE2E6C7FA5B46 /* Pods-ZZNetwork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,6 +525,7 @@
 		};
 		C9985D0420BBE58700BEEDA3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B382967DB035BAC81E495B09 /* Pods-ZZNetwork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

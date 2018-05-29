@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "ZZRequest.h"
+#import "WeatherApi.h"
 
-@interface ViewController ()
-
+@interface ViewController ()<ZZAsyRequestDelegate>
+@property (strong , nonatomic) ZZRequest *req;
 @end
 
 @implementation ViewController
@@ -17,13 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // test api http://www.weather.com.cn/data/sk/101190408.html check WeatherApi class
+    
+    ZZRequest *req = [ZZRequest requestWithProto:[WeatherApi new] delegate:self];
+    [req start];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)didSendRequest:(ZZRequest *)request{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
 }
 
+- (void)didReciveData:(id)data request:(ZZRequest *)request{
+    NSLog(@"%@-data:%@",NSStringFromSelector(_cmd),data);
+}
+
+- (void)didFailure:(NSError *)error request:(ZZRequest *)reqeust{
+    NSLog(@"%@-data:%@",NSStringFromSelector(_cmd),error);
+}
 
 @end
