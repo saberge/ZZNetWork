@@ -8,6 +8,7 @@
 
 #import "WeatherApi.h"
 #import "WeatherInfo.h"
+#import "WeatherInfoWarpper.h"
 
 @implementation WeatherApi
 
@@ -27,4 +28,11 @@
     return @{};
 }
 
+- (NSString *)identifier{
+    return NSStringFromClass(self.class);
+}
+
+- (Class<ZZReponse>)responseModelClass{
+    return [WeatherInfoWarpper class];
+}
 @end

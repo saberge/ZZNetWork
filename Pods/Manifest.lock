@@ -14,11 +14,30 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - YYModel (1.0.4)
   - ZZNetwork (1.0.0):
     - AFNetworking (~> 3.2.1)
+    - YYModel (~> 1.0.4)
+    - ZZNetwork/ZZCache (= 1.0.0)
+    - ZZNetwork/ZZCategory (= 1.0.0)
     - ZZNetwork/ZZRequest (= 1.0.0)
+    - ZZNetwork/ZZRequestPool (= 1.0.0)
+    - ZZNetwork/ZZStoreManager (= 1.0.0)
+  - ZZNetwork/ZZCache (1.0.0):
+    - AFNetworking (~> 3.2.1)
+    - YYModel (~> 1.0.4)
+  - ZZNetwork/ZZCategory (1.0.0):
+    - AFNetworking (~> 3.2.1)
+    - YYModel (~> 1.0.4)
   - ZZNetwork/ZZRequest (1.0.0):
     - AFNetworking (~> 3.2.1)
+    - YYModel (~> 1.0.4)
+  - ZZNetwork/ZZRequestPool (1.0.0):
+    - AFNetworking (~> 3.2.1)
+    - YYModel (~> 1.0.4)
+  - ZZNetwork/ZZStoreManager (1.0.0):
+    - AFNetworking (~> 3.2.1)
+    - YYModel (~> 1.0.4)
 
 DEPENDENCIES:
   - ZZNetwork (from `./ZZNetwork.podspec`)
@@ -26,6 +45,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - YYModel
 
 EXTERNAL SOURCES:
   ZZNetwork:
@@ -33,7 +53,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  ZZNetwork: 2a1402bf7d435ce17944c5db19ba26a1553ee96e
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  ZZNetwork: 83532f1767255231983a277b02fd8d99521262c3
 
 PODFILE CHECKSUM: 779771bbefa90ebab03c5ed1852d5af4f921d257
 

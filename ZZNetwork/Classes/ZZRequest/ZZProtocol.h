@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
+#import "ZZReponse.h"
 
 typedef void(^MultipartBlock)(id <AFMultipartFormData> formData);
 
@@ -23,10 +24,19 @@ typedef enum : NSUInteger {
 @property (copy   ,readonly , nonatomic) NSString     *path;
 
 /*
+ identifier 用于cache 协议的标识
+ */
+@property (strong ,readonly , nonatomic) NSString      *identifier;
+
+/*
  default ZZHTTPMethodPost
  custom by rewrite get method in your API class
  */
 @property (assign ,readonly , nonatomic) ZZHTTPMethod httpMethod;
-@property (copy   ,nonatomic) MultipartBlock multipartBlock;
 
+@property (copy   ,nonatomic) MultipartBlock multipartBlock;
+/*
+ responseModel 解析返回数据的类
+ */
+@property (assign ,readonly , nonatomic) Class <ZZReponse> responseModelClass;
 @end

@@ -23,6 +23,9 @@
 
 @interface ZZRequest : NSObject
 
+@property (strong ,readonly , nonatomic) NSObject <ZZProtocol> *curProto;
+@property (assign ,readonly , nonatomic) BOOL fromCache;
+
 + (instancetype)requestWithProto:(NSObject<ZZProtocol> *)proto
                         delegate:(id<ZZAsyRequestDelegate >) delegate;
 - (void)start;

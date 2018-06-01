@@ -9,7 +9,11 @@
 #ifndef ZZNetwork_h
 #define ZZNetwork_h
 
+#import "ZZCategory.h"
+
 #import "ZZRequest.h"
 #import "ZZProtocol.h"
+#import "ZZRequestPool.h"
+
 
 #endif /* ZZNetwork_h */

@@ -14,6 +14,7 @@
 @property (strong ,readonly , nonatomic) NSDictionary *headers;
 @property (copy   ,readonly , nonatomic) NSString     *path;
 @property (assign ,readonly , nonatomic) ZZHTTPMethod  httpMethod;
-
+@property (assign ,readonly , nonatomic) Class <ZZReponse> responseModelClass;
 @property (copy   ,nonatomic) MultipartBlock multipartBlock;
+
 @end

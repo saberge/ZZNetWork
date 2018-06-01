@@ -133,8 +133,29 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+    s.dependency 'YYModel', '~> 1.0.4'
+    
     s.subspec 'ZZRequest' do |zz|
         zz.source_files ='ZZNetwork/Classes/ZZRequest/*.{h,m}'
         s.dependency "AFNetworking", "~> 3.2.1"
+    end
+    
+    s.subspec 'ZZCategory' do |zz|
+        zz.source_files ='ZZNetwork/Classes/ZZCategory/*.{h,m}'
+        zz.public_header_files ='ZZNetwork/Classes/ZZCategory/ZZCategory.h'
+    end
+    
+    s.subspec 'ZZRequestPool' do |zz|
+        zz.source_files ='ZZNetwork/Classes/ZZRequestPool/*.{h,m}'
+    end
+    
+    s.subspec 'ZZCache' do |zz|
+        zz.source_files ='ZZNetwork/Classes/ZZRequestPool/*.{h,m}'
+        s.dependency "ZZNetwork/ZZCategory"
+    end
+    
+    s.subspec 'ZZStoreManager' do |zz|
+        zz.source_files ='ZZNetwork/Classes/ZZStoreManager/**'
+        s.frameworks = "CoreData"
     end
 end

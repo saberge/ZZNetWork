@@ -22,14 +22,38 @@
   "exclude_files": "Classes/Exclude",
   "public_header_files": "ZZNetwork/Classes/ZZNetwork.h",
   "dependencies": {
+    "YYModel": [
+      "~> 1.0.4"
+    ],
     "AFNetworking": [
       "~> 3.2.1"
+    ],
+    "ZZNetwork/ZZCategory": [
+
     ]
   },
+  "frameworks": "CoreData",
   "subspecs": [
     {
       "name": "ZZRequest",
       "source_files": "ZZNetwork/Classes/ZZRequest/*.{h,m}"
+    },
+    {
+      "name": "ZZCategory",
+      "source_files": "ZZNetwork/Classes/ZZCategory/*.{h,m}",
+      "public_header_files": "ZZNetwork/Classes/ZZCategory/ZZCategory.h"
+    },
+    {
+      "name": "ZZRequestPool",
+      "source_files": "ZZNetwork/Classes/ZZRequestPool/*.{h,m}"
+    },
+    {
+      "name": "ZZCache",
+      "source_files": "ZZNetwork/Classes/ZZRequestPool/*.{h,m}"
+    },
+    {
+      "name": "ZZStoreManager",
+      "source_files": "ZZNetwork/Classes/ZZStoreManager/**"
     }
   ]
 }

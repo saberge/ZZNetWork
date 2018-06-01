@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import "ZZRequest.h"
 #import "WeatherApi.h"
+#import "ZZMemoryCache.h"
+#import "NSDate+ZZ.h"
 
 @interface ViewController ()<ZZAsyRequestDelegate>
-@property (strong , nonatomic) ZZRequest *req;
 @end
 
 @implementation ViewController
@@ -21,9 +22,22 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     // test api http://www.weather.com.cn/data/sk/101190408.html check WeatherApi class
+    {
+        ZZRequest *req = [ZZRequest requestWithProto:[WeatherApi new] delegate:self];
+        [req start];
+    }
     
-    ZZRequest *req = [ZZRequest requestWithProto:[WeatherApi new] delegate:self];
-    [req start];
+    {
+        ZZRequest *req = [ZZRequest requestWithProto:[WeatherApi new] delegate:self];
+        [req start];
+    }
+    ZZMemoryCache *cache = [ZZMemoryCache new];
+    NSLog(@"start %f",[NSDate currentMediaTime]);
+    for (int i = 0; i <1000000; i++) {
+        [cache objectCacheForKey:@(i).stringValue];
+        [cache setCache:@(i) forKey:@(i).stringValue];
+    }
+    NSLog(@"end %f",[NSDate currentMediaTime]);
 }
 
 - (void)didSendRequest:(ZZRequest *)request{
@@ -32,6 +46,7 @@
 
 - (void)didReciveData:(id)data request:(ZZRequest *)request{
     NSLog(@"%@-data:%@",NSStringFromSelector(_cmd),data);
+    
 }
 
 - (void)didFailure:(NSError *)error request:(ZZRequest *)reqeust{

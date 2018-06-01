@@ -7,7 +7,11 @@
 //
 
 #import "WeatherInfo.h"
+#import "ZZRequestPool.h"
+#import <YYModel.h>
 
 @implementation WeatherInfo
-
++ (nullable instancetype)zz_modelWithDictionary:(NSDictionary *)dictionary{
+    return [self yy_modelWithDictionary:dictionary];
+}
 @end

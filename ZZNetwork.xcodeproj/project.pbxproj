@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		BBCFA39181AACA83C35A42C1 /* libPods-ZZNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8DEBCCD17DD6C69035A99D2 /* libPods-ZZNetwork.a */; };
+		C974AB0E20C00357000C4365 /* ZZStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C974AB0D20C00357000C4365 /* ZZStoreManager.m */; };
+		C974AB1420C00723000C4365 /* UIApplication+ZZ.m in Sources */ = {isa = PBXBuildFile; fileRef = C974AB1320C00723000C4365 /* UIApplication+ZZ.m */; };
+		C97A8DE120BE4CB700AC61DA /* NSDate+ZZ.m in Sources */ = {isa = PBXBuildFile; fileRef = C97A8DDF20BE4CB700AC61DA /* NSDate+ZZ.m */; };
+		C97A8DE220BE4CB700AC61DA /* NSString+ZZ.m in Sources */ = {isa = PBXBuildFile; fileRef = C97A8DE020BE4CB700AC61DA /* NSString+ZZ.m */; };
+		C97A8DE920BE4FF200AC61DA /* ZZRequestPool.m in Sources */ = {isa = PBXBuildFile; fileRef = C97A8DE720BE4FF200AC61DA /* ZZRequestPool.m */; };
+		C9829A2220C13C8D00C764E7 /* ZZKeyValueDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9829A2020C13C8D00C764E7 /* ZZKeyValueDB.xcdatamodeld */; };
+		C9829A2E20C1495D00C764E7 /* ZZKeyValueEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C9829A2C20C1495D00C764E7 /* ZZKeyValueEntity+CoreDataProperties.m */; };
 		C9985CDB20BBE58600BEEDA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CDA20BBE58600BEEDA3 /* AppDelegate.m */; };
 		C9985CDE20BBE58600BEEDA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CDD20BBE58600BEEDA3 /* ViewController.m */; };
 		C9985CE120BBE58600BEEDA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9985CDF20BBE58600BEEDA3 /* Main.storyboard */; };
@@ -18,6 +25,13 @@
 		C9985CFE20BBE58700BEEDA3 /* ZZNetworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985CFD20BBE58700BEEDA3 /* ZZNetworkUITests.m */; };
 		C99BD5D120BD12E3005A6E4A /* WeatherApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C99BD5D020BD12E3005A6E4A /* WeatherApi.m */; };
 		C99BD5D420BD130F005A6E4A /* WeatherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C99BD5D320BD130F005A6E4A /* WeatherInfo.m */; };
+		C9C7DE3A20BE509E00F8ECE8 /* ZZRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C9985D1120BBEE1000BEEDA3 /* ZZRequest.m */; };
+		C9C7DE3D20BE51E700F8ECE8 /* ZZBaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C7DE3C20BE51E700F8ECE8 /* ZZBaseApi.m */; };
+		C9C7DE4420BE632500F8ECE8 /* ZZBaseReponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C7DE4320BE632500F8ECE8 /* ZZBaseReponse.m */; };
+		C9C7DE4720BE66AA00F8ECE8 /* WeatherInfoWarpper.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C7DE4620BE66AA00F8ECE8 /* WeatherInfoWarpper.m */; };
+		C9C7DE4E20BE72B600F8ECE8 /* ZZCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C7DE4D20BE72B600F8ECE8 /* ZZCache.m */; };
+		C9C7DE5120BE76EF00F8ECE8 /* ZZMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C7DE5020BE76EF00F8ECE8 /* ZZMemoryCache.m */; };
+		C9C7DE5420BE76FE00F8ECE8 /* ZZDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C7DE5320BE76FE00F8ECE8 /* ZZDiskCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +54,20 @@
 /* Begin PBXFileReference section */
 		78868473D90CE2E6C7FA5B46 /* Pods-ZZNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZZNetwork/Pods-ZZNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		B382967DB035BAC81E495B09 /* Pods-ZZNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZZNetwork/Pods-ZZNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		C974AB0C20C00357000C4365 /* ZZStoreManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZStoreManager.h; sourceTree = "<group>"; };
+		C974AB0D20C00357000C4365 /* ZZStoreManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZStoreManager.m; sourceTree = "<group>"; };
+		C974AB1220C00723000C4365 /* UIApplication+ZZ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ZZ.h"; sourceTree = "<group>"; };
+		C974AB1320C00723000C4365 /* UIApplication+ZZ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ZZ.m"; sourceTree = "<group>"; };
+		C97A8DDD20BE4CB700AC61DA /* NSString+ZZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ZZ.h"; sourceTree = "<group>"; };
+		C97A8DDE20BE4CB700AC61DA /* NSDate+ZZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZZ.h"; sourceTree = "<group>"; };
+		C97A8DDF20BE4CB700AC61DA /* NSDate+ZZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZZ.m"; sourceTree = "<group>"; };
+		C97A8DE020BE4CB700AC61DA /* NSString+ZZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZZ.m"; sourceTree = "<group>"; };
+		C97A8DE320BE4DA500AC61DA /* ZZCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCategory.h; sourceTree = "<group>"; };
+		C97A8DE720BE4FF200AC61DA /* ZZRequestPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZRequestPool.m; sourceTree = "<group>"; };
+		C97A8DE820BE4FF200AC61DA /* ZZRequestPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZRequestPool.h; sourceTree = "<group>"; };
+		C9829A2120C13C8D00C764E7 /* ZZKeyValueDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZZKeyValueDB.xcdatamodel; sourceTree = "<group>"; };
+		C9829A2920C1495D00C764E7 /* ZZKeyValueEntity+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZZKeyValueEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C9829A2C20C1495D00C764E7 /* ZZKeyValueEntity+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZZKeyValueEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
 		C9985CD620BBE58600BEEDA3 /* ZZNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9985CD920BBE58600BEEDA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9985CDA20BBE58600BEEDA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,6 +92,20 @@
 		C99BD5D320BD130F005A6E4A /* WeatherInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherInfo.m; sourceTree = "<group>"; };
 		C99BD5D520BD3236005A6E4A /* ZZNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZNetwork.h; sourceTree = "<group>"; };
 		C9AD0D8F20BC0E8800C365B4 /* ZZProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZProtocol.h; sourceTree = "<group>"; };
+		C9C7DE3B20BE51E700F8ECE8 /* ZZBaseApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZBaseApi.h; sourceTree = "<group>"; };
+		C9C7DE3C20BE51E700F8ECE8 /* ZZBaseApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZBaseApi.m; sourceTree = "<group>"; };
+		C9C7DE4120BE630900F8ECE8 /* ZZReponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZReponse.h; sourceTree = "<group>"; };
+		C9C7DE4220BE632500F8ECE8 /* ZZBaseReponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZBaseReponse.h; sourceTree = "<group>"; };
+		C9C7DE4320BE632500F8ECE8 /* ZZBaseReponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZBaseReponse.m; sourceTree = "<group>"; };
+		C9C7DE4520BE66AA00F8ECE8 /* WeatherInfoWarpper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherInfoWarpper.h; sourceTree = "<group>"; };
+		C9C7DE4620BE66AA00F8ECE8 /* WeatherInfoWarpper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherInfoWarpper.m; sourceTree = "<group>"; };
+		C9C7DE4C20BE72B600F8ECE8 /* ZZCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCache.h; sourceTree = "<group>"; };
+		C9C7DE4D20BE72B600F8ECE8 /* ZZCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCache.m; sourceTree = "<group>"; };
+		C9C7DE4F20BE76EF00F8ECE8 /* ZZMemoryCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZMemoryCache.h; sourceTree = "<group>"; };
+		C9C7DE5020BE76EF00F8ECE8 /* ZZMemoryCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZMemoryCache.m; sourceTree = "<group>"; };
+		C9C7DE5220BE76FE00F8ECE8 /* ZZDiskCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZDiskCache.h; sourceTree = "<group>"; };
+		C9C7DE5320BE76FE00F8ECE8 /* ZZDiskCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZDiskCache.m; sourceTree = "<group>"; };
+		C9C7DE5520BE7ED700F8ECE8 /* ZZCacheProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCacheProtocol.h; sourceTree = "<group>"; };
 		F8DEBCCD17DD6C69035A99D2 /* libPods-ZZNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZZNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +144,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C974AB0B20C00347000C4365 /* ZZStoreManager */ = {
+			isa = PBXGroup;
+			children = (
+				C9829A2920C1495D00C764E7 /* ZZKeyValueEntity+CoreDataProperties.h */,
+				C9829A2C20C1495D00C764E7 /* ZZKeyValueEntity+CoreDataProperties.m */,
+				C974AB0C20C00357000C4365 /* ZZStoreManager.h */,
+				C974AB0D20C00357000C4365 /* ZZStoreManager.m */,
+				C9829A2020C13C8D00C764E7 /* ZZKeyValueDB.xcdatamodeld */,
+			);
+			path = ZZStoreManager;
+			sourceTree = "<group>";
+		};
+		C97A8DDC20BE4C9D00AC61DA /* ZZCategory */ = {
+			isa = PBXGroup;
+			children = (
+				C97A8DE320BE4DA500AC61DA /* ZZCategory.h */,
+				C97A8DDE20BE4CB700AC61DA /* NSDate+ZZ.h */,
+				C97A8DDF20BE4CB700AC61DA /* NSDate+ZZ.m */,
+				C97A8DDD20BE4CB700AC61DA /* NSString+ZZ.h */,
+				C97A8DE020BE4CB700AC61DA /* NSString+ZZ.m */,
+				C974AB1220C00723000C4365 /* UIApplication+ZZ.h */,
+				C974AB1320C00723000C4365 /* UIApplication+ZZ.m */,
+			);
+			path = ZZCategory;
+			sourceTree = "<group>";
+		};
+		C97A8DE620BE4FF200AC61DA /* ZZRequestPool */ = {
+			isa = PBXGroup;
+			children = (
+				C97A8DE820BE4FF200AC61DA /* ZZRequestPool.h */,
+				C97A8DE720BE4FF200AC61DA /* ZZRequestPool.m */,
+			);
+			path = ZZRequestPool;
+			sourceTree = "<group>";
+		};
 		C9985CCD20BBE58600BEEDA3 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +210,8 @@
 				C9985CDD20BBE58600BEEDA3 /* ViewController.m */,
 				C99BD5CF20BD12E3005A6E4A /* WeatherApi.h */,
 				C99BD5D020BD12E3005A6E4A /* WeatherApi.m */,
+				C9C7DE4520BE66AA00F8ECE8 /* WeatherInfoWarpper.h */,
+				C9C7DE4620BE66AA00F8ECE8 /* WeatherInfoWarpper.m */,
 				C99BD5D220BD130F005A6E4A /* WeatherInfo.h */,
 				C99BD5D320BD130F005A6E4A /* WeatherInfo.m */,
 				C9985D0B20BBEA3500BEEDA3 /* Classes */,
@@ -167,6 +246,10 @@
 			isa = PBXGroup;
 			children = (
 				C99BD5D520BD3236005A6E4A /* ZZNetwork.h */,
+				C974AB0B20C00347000C4365 /* ZZStoreManager */,
+				C9C7DE4B20BE72A600F8ECE8 /* ZZCache */,
+				C97A8DE620BE4FF200AC61DA /* ZZRequestPool */,
+				C97A8DDC20BE4C9D00AC61DA /* ZZCategory */,
 				C9985D0C20BBEDC000BEEDA3 /* ZZRequest */,
 			);
 			path = Classes;
@@ -178,8 +261,27 @@
 				C9985D1020BBEE1000BEEDA3 /* ZZRequest.h */,
 				C9985D1120BBEE1000BEEDA3 /* ZZRequest.m */,
 				C9AD0D8F20BC0E8800C365B4 /* ZZProtocol.h */,
+				C9C7DE4120BE630900F8ECE8 /* ZZReponse.h */,
+				C9C7DE3B20BE51E700F8ECE8 /* ZZBaseApi.h */,
+				C9C7DE3C20BE51E700F8ECE8 /* ZZBaseApi.m */,
+				C9C7DE4220BE632500F8ECE8 /* ZZBaseReponse.h */,
+				C9C7DE4320BE632500F8ECE8 /* ZZBaseReponse.m */,
 			);
 			path = ZZRequest;
+			sourceTree = "<group>";
+		};
+		C9C7DE4B20BE72A600F8ECE8 /* ZZCache */ = {
+			isa = PBXGroup;
+			children = (
+				C9C7DE4C20BE72B600F8ECE8 /* ZZCache.h */,
+				C9C7DE4D20BE72B600F8ECE8 /* ZZCache.m */,
+				C9C7DE5520BE7ED700F8ECE8 /* ZZCacheProtocol.h */,
+				C9C7DE4F20BE76EF00F8ECE8 /* ZZMemoryCache.h */,
+				C9C7DE5020BE76EF00F8ECE8 /* ZZMemoryCache.m */,
+				C9C7DE5220BE76FE00F8ECE8 /* ZZDiskCache.h */,
+				C9C7DE5320BE76FE00F8ECE8 /* ZZDiskCache.m */,
+			);
+			path = ZZCache;
 			sourceTree = "<group>";
 		};
 		EA72F262A12023AD990FCF9C /* Frameworks */ = {
@@ -345,11 +447,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9829A2E20C1495D00C764E7 /* ZZKeyValueEntity+CoreDataProperties.m in Sources */,
 				C9985CDE20BBE58600BEEDA3 /* ViewController.m in Sources */,
 				C9985CE920BBE58600BEEDA3 /* main.m in Sources */,
+				C97A8DE920BE4FF200AC61DA /* ZZRequestPool.m in Sources */,
 				C9985CDB20BBE58600BEEDA3 /* AppDelegate.m in Sources */,
+				C9C7DE5420BE76FE00F8ECE8 /* ZZDiskCache.m in Sources */,
+				C9C7DE4720BE66AA00F8ECE8 /* WeatherInfoWarpper.m in Sources */,
 				C99BD5D120BD12E3005A6E4A /* WeatherApi.m in Sources */,
+				C974AB0E20C00357000C4365 /* ZZStoreManager.m in Sources */,
+				C97A8DE220BE4CB700AC61DA /* NSString+ZZ.m in Sources */,
+				C97A8DE120BE4CB700AC61DA /* NSDate+ZZ.m in Sources */,
+				C974AB1420C00723000C4365 /* UIApplication+ZZ.m in Sources */,
+				C9C7DE3D20BE51E700F8ECE8 /* ZZBaseApi.m in Sources */,
+				C9C7DE5120BE76EF00F8ECE8 /* ZZMemoryCache.m in Sources */,
+				C9C7DE3A20BE509E00F8ECE8 /* ZZRequest.m in Sources */,
+				C9C7DE4E20BE72B600F8ECE8 /* ZZCache.m in Sources */,
+				C9C7DE4420BE632500F8ECE8 /* ZZBaseReponse.m in Sources */,
 				C99BD5D420BD130F005A6E4A /* WeatherInfo.m in Sources */,
+				C9829A2220C13C8D00C764E7 /* ZZKeyValueDB.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +752,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9829A2020C13C8D00C764E7 /* ZZKeyValueDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9829A2120C13C8D00C764E7 /* ZZKeyValueDB.xcdatamodel */,
+			);
+			currentVersion = C9829A2120C13C8D00C764E7 /* ZZKeyValueDB.xcdatamodel */;
+			path = ZZKeyValueDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C9985CCE20BBE58600BEEDA3 /* Project object */;
 }
