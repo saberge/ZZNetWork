@@ -27,12 +27,8 @@
     ],
     "AFNetworking": [
       "~> 3.2.1"
-    ],
-    "ZZNetwork/ZZCategory": [
-
     ]
   },
-  "frameworks": "CoreData",
   "subspecs": [
     {
       "name": "ZZRequest",
@@ -53,7 +49,9 @@
     },
     {
       "name": "ZZStoreManager",
-      "source_files": "ZZNetwork/Classes/ZZStoreManager/**"
+      "source_files": "ZZNetwork/Classes/ZZStoreManager/*.{h,m}",
+      "frameworks": "CoreData",
+      "resources": "ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld"
     }
   ]
 }

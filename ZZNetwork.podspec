@@ -145,17 +145,14 @@ Pod::Spec.new do |s|
         zz.public_header_files ='ZZNetwork/Classes/ZZCategory/ZZCategory.h'
     end
     
-    s.subspec 'ZZRequestPool' do |zz|
-        zz.source_files ='ZZNetwork/Classes/ZZRequestPool/*.{h,m}'
-    end
-    
     s.subspec 'ZZCache' do |zz|
         zz.source_files ='ZZNetwork/Classes/ZZRequestPool/*.{h,m}'
-        s.dependency "ZZNetwork/ZZCategory"
+        #s.dependency "ZZNetwork/ZZCategory"
     end
     
     s.subspec 'ZZStoreManager' do |zz|
-        zz.source_files ='ZZNetwork/Classes/ZZStoreManager/**'
-        s.frameworks = "CoreData"
+        zz.source_files ='ZZNetwork/Classes/ZZStoreManager/*.{h,m}'
+        zz.frameworks = "CoreData"
+        zz.resources = 'ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld'
     end
 end
