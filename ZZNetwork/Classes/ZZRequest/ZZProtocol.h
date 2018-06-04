@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
 #import "ZZReponse.h"
 
+@protocol AFMultipartFormData;
 typedef void(^MultipartBlock)(id <AFMultipartFormData> formData);
 
 typedef enum : NSUInteger {

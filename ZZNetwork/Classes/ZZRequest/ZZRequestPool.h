@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZZRequest.h"
-
+@class ZZRequest;
 /*
  当前正在网络请求的池，用于规避重复的网络请求。
  */

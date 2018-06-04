@@ -12,6 +12,8 @@
 #import "ZZReponse.h"
 #import "ZZCache.h"
 #import "NSString+ZZ.h"
+#import "ZZCache.h"
+#import "ZZProtocol.h"
 
 @interface ZZRequest ()
 @property (strong , nonatomic) NSObject<ZZProtocol> *curProto;

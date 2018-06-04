@@ -9,7 +9,8 @@
 #ifndef ZZCategory_h
 #define ZZCategory_h
 
-#import "NSDate+ZZ.h"
 #import "NSString+ZZ.h"
+#import "NSDate+ZZ.h"
+#import "UIApplication+ZZ.h"
 
 #endif /* ZZCategory_h */

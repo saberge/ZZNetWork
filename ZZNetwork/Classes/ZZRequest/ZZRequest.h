@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ZZProtocol.h"
+
 
 /*
     发起网络请求的类。
@@ -15,6 +15,7 @@
  */
 
 @class ZZRequest;
+@protocol ZZProtocol;
 @protocol ZZAsyRequestDelegate <NSObject>
 - (void)didSendRequest:(ZZRequest *)request;
 - (void)didReciveData:(id)data request:(ZZRequest *)request;

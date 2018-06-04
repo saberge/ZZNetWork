@@ -21,25 +21,33 @@
   ],
   "exclude_files": "Classes/Exclude",
   "public_header_files": "ZZNetwork/Classes/ZZNetwork.h",
-  "dependencies": {
-    "YYModel": [
-      "~> 1.0.4"
-    ]
-  },
   "subspecs": [
     {
       "name": "ZZCategory",
       "source_files": "ZZNetwork/Classes/ZZCategory/*.{h,m}",
-      "public_header_files": "ZZNetwork/Classes/ZZCategory/ZZCategory.h"
+      "frameworks": "QuartzCore"
     },
     {
       "name": "ZZCache",
-      "source_files": "ZZNetwork/Classes/ZZRequestPool/*.{h,m}"
+      "source_files": "ZZNetwork/Classes/ZZCache/*.{h,m}",
+      "dependencies": {
+        "ZZNetwork/ZZCategory": [
+
+        ],
+        "ZZNetwork/ZZStoreManager": [
+
+        ]
+      }
     },
     {
       "name": "ZZStoreManager",
-      "source_files": "ZZNetwork/Classes/ZZStoreManager/*.{h,m}",
+      "source_files": "ZZNetwork/Classes/ZZStoreManager/ZZStoreManager.{h,m}",
       "frameworks": "CoreData",
+      "dependencies": {
+        "ZZNetwork/ZZCategory": [
+
+        ]
+      },
       "resources": "ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld"
     },
     {
@@ -48,6 +56,18 @@
       "dependencies": {
         "AFNetworking": [
           "~> 3.2.1"
+        ],
+        "ZZNetwork/ZZCategory": [
+
+        ],
+        "ZZNetwork/ZZCache": [
+
+        ],
+        "ZZNetwork/ZZStoreManager": [
+
+        ],
+        "YYModel": [
+          "~> 1.0.4"
         ]
       }
     }

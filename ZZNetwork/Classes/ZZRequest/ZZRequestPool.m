@@ -8,6 +8,8 @@
 
 #import "ZZRequestPool.h"
 #import "ZZCategory.h"
+#import "ZZRequest.h"
+#import "ZZProtocol.h"
 
 @interface ZZRequestPool ()
 {

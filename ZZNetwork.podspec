@@ -133,29 +133,39 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-    s.dependency 'YYModel', '~> 1.0.4'
-    
     s.subspec 'ZZCategory' do |zz|
         zz.source_files ='ZZNetwork/Classes/ZZCategory/*.{h,m}'
-        zz.public_header_files ='ZZNetwork/Classes/ZZCategory/ZZCategory.h'
+        #zz.public_header_files ='ZZNetwork/Classes/ZZCategory/ZZCategory.h'
+        zz.frameworks = 'QuartzCore'
     end
     
     s.subspec 'ZZCache' do |zz|
-        zz.source_files ='ZZNetwork/Classes/ZZRequestPool/*.{h,m}'
-        #s.dependency "ZZNetwork/ZZCategory"
+        zz.source_files ='ZZNetwork/Classes/ZZCache/*.{h,m}'
+        zz.dependency 'ZZNetwork/ZZCategory'
+        zz.dependency 'ZZNetwork/ZZStoreManager'
     end
     
+#    s.subspec 'ZZRequestPool' do |zz|
+#        zz.source_files ='ZZNetwork/Classes/ZZRequestPool/*.{h,m}'
+#        zz.dependency 'ZZNetwork/ZZCategory'
+##        zz.dependency 'ZZNetwork/ZZRequest'
+#    end
+
     s.subspec 'ZZStoreManager' do |zz|
-        zz.source_files ='ZZNetwork/Classes/ZZStoreManager/*.{h,m}'
-        zz.frameworks = "CoreData"
+        zz.source_files ='ZZNetwork/Classes/ZZStoreManager/ZZStoreManager.{h,m}'
+        zz.frameworks = 'CoreData'
+        zz.dependency 'ZZNetwork/ZZCategory'
         zz.resources = 'ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld'
     end
     s.subspec 'ZZRequest' do |zz|
         zz.source_files ='ZZNetwork/Classes/ZZRequest/*.{h,m}'
-        zz.dependency "AFNetworking", "~> 3.2.1"
-        #zz.dependency "ZZRequest/ZZCategory"
-        #zz.dependency "ZZRequest/ZZCache"
-        #zz.dependency "ZZRequest/ZZStoreManager"
+        zz.dependency 'AFNetworking', '~> 3.2.1'
+        zz.dependency 'ZZNetwork/ZZCategory'
+        zz.dependency 'ZZNetwork/ZZCache'
+        zz.dependency 'ZZNetwork/ZZStoreManager'
+#        zz.dependency 'ZZNetwork/ZZRequestPool'
+        zz.dependency 'YYModel', '~> 1.0.4'
+
     end
     
    
