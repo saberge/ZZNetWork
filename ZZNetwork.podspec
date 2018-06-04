@@ -135,7 +135,6 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
     s.subspec 'ZZCategory' do |zz|
         zz.source_files ='ZZNetwork/Classes/ZZCategory/*.{h,m}'
-        #zz.public_header_files ='ZZNetwork/Classes/ZZCategory/ZZCategory.h'
         zz.frameworks = 'QuartzCore'
     end
     
@@ -144,12 +143,6 @@ Pod::Spec.new do |s|
         zz.dependency 'ZZNetwork/ZZCategory'
         zz.dependency 'ZZNetwork/ZZStoreManager'
     end
-    
-#    s.subspec 'ZZRequestPool' do |zz|
-#        zz.source_files ='ZZNetwork/Classes/ZZRequestPool/*.{h,m}'
-#        zz.dependency 'ZZNetwork/ZZCategory'
-##        zz.dependency 'ZZNetwork/ZZRequest'
-#    end
 
     s.subspec 'ZZStoreManager' do |zz|
         zz.source_files ='ZZNetwork/Classes/ZZStoreManager/ZZStoreManager.{h,m}'
@@ -163,7 +156,6 @@ Pod::Spec.new do |s|
         zz.dependency 'ZZNetwork/ZZCategory'
         zz.dependency 'ZZNetwork/ZZCache'
         zz.dependency 'ZZNetwork/ZZStoreManager'
-#        zz.dependency 'ZZNetwork/ZZRequestPool'
         zz.dependency 'YYModel', '~> 1.0.4'
 
     end

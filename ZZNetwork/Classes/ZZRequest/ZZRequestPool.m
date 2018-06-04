@@ -7,17 +7,16 @@
 //
 
 #import "ZZRequestPool.h"
-#import "ZZCategory.h"
 #import "ZZRequest.h"
 #import "ZZProtocol.h"
+#import "NSString+ZZ.h"
 
 @interface ZZRequestPool ()
-{
-    NSMutableDictionary *cacheDic;
-}
+@property (strong , nonatomic) NSMutableDictionary *cacheDic;
 @end
 
 @implementation ZZRequestPool
+@synthesize cacheDic = cacheDic;
 
 +(instancetype)sharePool{
     static dispatch_once_t once;
@@ -29,28 +28,31 @@
 }
 
 - (BOOL)containReqeust:(ZZRequest *)request{
-    if (!cacheDic) return NO;
+    if (!self.cacheDic) return NO;
     
     NSString *key = request.curProto.identifier.MD5;
     NSParameterAssert(key.length);
-    return [[cacheDic allKeys] containsObject:key];
+    return [[self.cacheDic allKeys] containsObject:key];
 }
 
 - (void)addRequest:(ZZRequest *)request{
-    static dispatch_once_t once;
-    dispatch_once(&once, ^ {
-        cacheDic = [NSMutableDictionary new];
-    });
-    
     NSString *key = request.curProto.identifier.MD5;
     NSParameterAssert(key.length);
-    [cacheDic setValue:request forKey:key];
+    [self.cacheDic setValue:request forKey:key];
 }
 
 - (void)removeRequest:(ZZRequest *)request{
     NSString *key = request.curProto.identifier.MD5;
      NSParameterAssert(key.length);
-    [cacheDic removeObjectForKey:key];
+    [self.cacheDic removeObjectForKey:key];
+}
+
+#pragma mark --- getters
+- (NSMutableDictionary *)cacheDic{
+    if (!cacheDic) {
+        cacheDic = [NSMutableDictionary new];
+    }
+    return cacheDic;
 }
 
 @end

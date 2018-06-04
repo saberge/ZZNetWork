@@ -61,7 +61,6 @@
 		C97A8DDE20BE4CB700AC61DA /* NSDate+ZZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZZ.h"; sourceTree = "<group>"; };
 		C97A8DDF20BE4CB700AC61DA /* NSDate+ZZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZZ.m"; sourceTree = "<group>"; };
 		C97A8DE020BE4CB700AC61DA /* NSString+ZZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZZ.m"; sourceTree = "<group>"; };
-		C97A8DE320BE4DA500AC61DA /* ZZCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCategory.h; sourceTree = "<group>"; };
 		C9829A2120C13C8D00C764E7 /* ZZKeyValueDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ZZKeyValueDB.xcdatamodel; sourceTree = "<group>"; };
 		C9985CD620BBE58600BEEDA3 /* ZZNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9985CD920BBE58600BEEDA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -162,7 +161,6 @@
 		C97A8DDC20BE4C9D00AC61DA /* ZZCategory */ = {
 			isa = PBXGroup;
 			children = (
-				C97A8DE320BE4DA500AC61DA /* ZZCategory.h */,
 				C97A8DDE20BE4CB700AC61DA /* NSDate+ZZ.h */,
 				C97A8DDF20BE4CB700AC61DA /* NSDate+ZZ.m */,
 				C97A8DDD20BE4CB700AC61DA /* NSString+ZZ.h */,
