@@ -93,7 +93,9 @@
 }
 
 - (NSManagedObjectModel *)objectModelWithName:(NSString *)modelName{
-    NSURL *modelPath = [[NSBundle mainBundle] URLForResource:modelName withExtension:@"momd"];
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:NSStringFromClass(self.class) ofType:@"bundle"];
+    NSBundle *nibBundle = [NSBundle bundleWithPath:bundlePath];
+    NSURL *modelPath = [nibBundle URLForResource:modelName withExtension:@"momd"];
     return [[NSManagedObjectModel alloc] initWithContentsOfURL:modelPath];
 }
 
