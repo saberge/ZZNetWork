@@ -441,11 +441,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ZZNetwork/Pods-ZZNetwork-resources.sh",
-				"${PODS_ROOT}/../ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld",
+				"${PODS_CONFIGURATION_BUILD_DIR}/ZZNetwork/ZZStoreManager.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZZKeyValueDB.momd",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZZStoreManager.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

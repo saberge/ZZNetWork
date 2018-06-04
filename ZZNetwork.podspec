@@ -133,6 +133,9 @@ Pod::Spec.new do |s|
   # s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+#    s.resources = 'ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld'
+
+  
     s.subspec 'ZZCategory' do |zz|
         zz.source_files ='ZZNetwork/Classes/ZZCategory/*.{h,m}'
         zz.frameworks = 'QuartzCore'
@@ -148,7 +151,10 @@ Pod::Spec.new do |s|
         zz.source_files ='ZZNetwork/Classes/ZZStoreManager/ZZStoreManager.{h,m}'
         zz.frameworks = 'CoreData'
         zz.dependency 'ZZNetwork/ZZCategory'
-        zz.resources = 'ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld'
+        zz.resource_bundles = {
+            'ZZStoreManager' => ['ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld']
+        }
+        
     end
     s.subspec 'ZZRequest' do |zz|
         zz.source_files ='ZZNetwork/Classes/ZZRequest/*.{h,m}'

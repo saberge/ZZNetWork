@@ -92,10 +92,10 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/../ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/ZZNetwork/ZZStoreManager.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/../ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/ZZNetwork/ZZStoreManager.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

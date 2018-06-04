@@ -15,22 +15,21 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - YYModel (1.0.4)
-  - ZZNetwork (1.0.0):
-    - ZZNetwork/ZZCache (= 1.0.0)
-    - ZZNetwork/ZZCategory (= 1.0.0)
-    - ZZNetwork/ZZRequest (= 1.0.0)
-    - ZZNetwork/ZZStoreManager (= 1.0.0)
-  - ZZNetwork/ZZCache (1.0.0):
+  - ZZNetwork (1.0.1):
+    - ZZNetwork/ZZCache (= 1.0.1)
+    - ZZNetwork/ZZCategory (= 1.0.1)
+    - ZZNetwork/ZZRequest (= 1.0.1)
+    - ZZNetwork/ZZStoreManager (= 1.0.1)
+  - ZZNetwork/ZZCache (1.0.1):
     - ZZNetwork/ZZCategory
     - ZZNetwork/ZZStoreManager
-  - ZZNetwork/ZZCategory (1.0.0)
-  - ZZNetwork/ZZRequest (1.0.0):
+  - ZZNetwork/ZZCategory (1.0.1)
+  - ZZNetwork/ZZRequest (1.0.1):
     - AFNetworking (~> 3.2.1)
     - YYModel (~> 1.0.4)
     - ZZNetwork/ZZCache
     - ZZNetwork/ZZCategory
-    - ZZNetwork/ZZStoreManager
-  - ZZNetwork/ZZStoreManager (1.0.0):
+  - ZZNetwork/ZZStoreManager (1.0.1):
     - ZZNetwork/ZZCategory
 
 DEPENDENCIES:
@@ -48,7 +47,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
-  ZZNetwork: 01e4a69ef3c8a8e793210b788a62a8848832da61
+  ZZNetwork: 178f9f7d10f12f4d03c373cc5545b306737136a2
 
 PODFILE CHECKSUM: 779771bbefa90ebab03c5ed1852d5af4f921d257
 
