@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZZNetwork"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "网络请求的封装，基于AFNetworking,扩展一些基本常用的业务功能"
 
   # This description is used to generate tags and improve search results.
@@ -155,7 +155,6 @@ Pod::Spec.new do |s|
         zz.dependency 'AFNetworking', '~> 3.2.1'
         zz.dependency 'ZZNetwork/ZZCategory'
         zz.dependency 'ZZNetwork/ZZCache'
-        zz.dependency 'ZZNetwork/ZZStoreManager'
         zz.dependency 'YYModel', '~> 1.0.4'
 
     end

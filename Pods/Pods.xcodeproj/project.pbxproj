@@ -31,7 +31,6 @@
 		5659051E0406262E15BF34198FEC7E0A /* Pods-ZZNetwork-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E97E5AE77D4E346F5E87B18A543A333C /* Pods-ZZNetwork-dummy.m */; };
 		5826A9035BFE8D6B269E5E9345D8AA62 /* ZZCacheProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCB127D0B35982DCBD77C6B52F8E497 /* ZZCacheProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		5B309D03C055EA6469DC2B57CBD70EBD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25DBD08CA9FCAA452F706451D0387CC8 /* QuartzCore.framework */; };
-		5C34FA3B1FE7C79F0EFC9D4806B9696B /* ZZCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = A272F05FD063FBB80083E76286158610 /* ZZCategory.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6205EE7021ED9E789E88292CC076847A /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD7E128B9EF61A446349F9EEEF53BED /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		627B8656D435FF535E04971E846DA3A3 /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 11CDECE94D981F6F3155BABFAED86A28 /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		63EC82A2749770DDFDD0102301F7003A /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B63D7BECD4F012D1F4C8465FAF7F5B /* NSObject+YYModel.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -182,7 +181,6 @@
 		97E29D21E38FEE49B9B256658F5A8370 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		97F6E63E18D755E1159A320320F33C20 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
 		9819E963CC867B8E511609D6651CF151 /* NSObject+YYModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYModel.h"; path = "YYModel/NSObject+YYModel.h"; sourceTree = "<group>"; };
-		A272F05FD063FBB80083E76286158610 /* ZZCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZZCategory.h; path = ZZNetwork/Classes/ZZCategory/ZZCategory.h; sourceTree = "<group>"; };
 		A306C53B4E48F20EFD23C1E7FDD4C70F /* ZZNetwork-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZZNetwork-dummy.m"; sourceTree = "<group>"; };
 		A4B0D2282515834255C1D474DBDB1265 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		A6810537B1AC3CD608499ECBFB50E597 /* ZZStoreManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZZStoreManager.h; path = ZZNetwork/Classes/ZZStoreManager/ZZStoreManager.h; sourceTree = "<group>"; };
@@ -416,7 +414,6 @@
 				E300A876939388BCC5ABDD8CAC7D63C3 /* NSString+ZZ.m */,
 				1D97F13BDD0E8184F06D7FC4C985B1CF /* UIApplication+ZZ.h */,
 				54B8BF988573A1E0AA91D4BA3F144329 /* UIApplication+ZZ.m */,
-				A272F05FD063FBB80083E76286158610 /* ZZCategory.h */,
 			);
 			name = ZZCategory;
 			sourceTree = "<group>";
@@ -602,7 +599,6 @@
 				89217D3B6ABD3FC75A2508F3E93FDE13 /* ZZBaseReponse.h in Headers */,
 				7F13E934FE95DBB7792DA810933EBC01 /* ZZCache.h in Headers */,
 				5826A9035BFE8D6B269E5E9345D8AA62 /* ZZCacheProtocol.h in Headers */,
-				5C34FA3B1FE7C79F0EFC9D4806B9696B /* ZZCategory.h in Headers */,
 				F7E137A773C05537FB3A5BD0910D3E33 /* ZZDiskCache.h in Headers */,
 				D282C04802DCDB7D0B7DB1862C981481 /* ZZMemoryCache.h in Headers */,
 				2BBA9D6044FFCA678B2443305D0CF2A1 /* ZZNetwork.h in Headers */,
