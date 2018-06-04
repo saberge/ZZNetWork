@@ -135,11 +135,6 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
     s.dependency 'YYModel', '~> 1.0.4'
     
-    s.subspec 'ZZRequest' do |zz|
-        zz.source_files ='ZZNetwork/Classes/ZZRequest/*.{h,m}'
-        s.dependency "AFNetworking", "~> 3.2.1"
-    end
-    
     s.subspec 'ZZCategory' do |zz|
         zz.source_files ='ZZNetwork/Classes/ZZCategory/*.{h,m}'
         zz.public_header_files ='ZZNetwork/Classes/ZZCategory/ZZCategory.h'
@@ -155,4 +150,13 @@ Pod::Spec.new do |s|
         zz.frameworks = "CoreData"
         zz.resources = 'ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld'
     end
+    s.subspec 'ZZRequest' do |zz|
+        zz.source_files ='ZZNetwork/Classes/ZZRequest/*.{h,m}'
+        zz.dependency "AFNetworking", "~> 3.2.1"
+        #zz.dependency "ZZRequest/ZZCategory"
+        #zz.dependency "ZZRequest/ZZCache"
+        #zz.dependency "ZZRequest/ZZStoreManager"
+    end
+    
+   
 end
