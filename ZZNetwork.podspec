@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ZZNetwork"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "网络请求的封装，基于AFNetworking,扩展一些基本常用的业务功能"
 
   # This description is used to generate tags and improve search results.
@@ -135,7 +135,6 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
 #    s.resources = 'ZZNetwork/Classes/ZZStoreManager/ZZKeyValueDB.xcdatamodeld'
 
-  
     s.subspec 'ZZCategory' do |zz|
         zz.source_files ='ZZNetwork/Classes/ZZCategory/*.{h,m}'
         zz.frameworks = 'QuartzCore'
@@ -148,7 +147,7 @@ Pod::Spec.new do |s|
     end
 
     s.subspec 'ZZStoreManager' do |zz|
-        zz.source_files ='ZZNetwork/Classes/ZZStoreManager/ZZStoreManager.{h,m}'
+        zz.source_files ='ZZNetwork/Classes/ZZStoreManager/*.{h,m}'
         zz.frameworks = 'CoreData'
         zz.dependency 'ZZNetwork/ZZCategory'
         zz.resource_bundles = {

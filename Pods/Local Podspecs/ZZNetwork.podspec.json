@@ -1,6 +1,6 @@
 {
   "name": "ZZNetwork",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "summary": "网络请求的封装，基于AFNetworking,扩展一些基本常用的业务功能",
   "description": "网络请求的封装，基于AFNetworking,扩展一些基本常用的业务功能。如网络请求的去重，网络请求结果缓存。请求错误协议的记录等等。",
   "homepage": "https://github.com/saberge/ZZNetwork.git",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/saberge/ZZNetwork.git",
-    "tag": "1.0.1"
+    "tag": "1.0.2"
   },
   "source_files": [
     "Classes",
@@ -41,7 +41,7 @@
     },
     {
       "name": "ZZStoreManager",
-      "source_files": "ZZNetwork/Classes/ZZStoreManager/ZZStoreManager.{h,m}",
+      "source_files": "ZZNetwork/Classes/ZZStoreManager/*.{h,m}",
       "frameworks": "CoreData",
       "dependencies": {
         "ZZNetwork/ZZCategory": [
