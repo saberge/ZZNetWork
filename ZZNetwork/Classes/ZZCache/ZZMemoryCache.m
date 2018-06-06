@@ -8,6 +8,7 @@
 
 #import "ZZMemoryCache.h"
 #import "NSDate+ZZ.h"
+#import <pthread.h>
 
 #pragma mark --- linkNode
 @interface ZZLinkNode:NSObject
@@ -32,6 +33,7 @@
 - (void)insertNode:(ZZLinkNode *)node;
 - (void)removeNode:(ZZLinkNode *)node;
 - (void)bringNodeToHead:(ZZLinkNode *)node;
+- (void)removeAllNodes;
 
 @end
 
@@ -46,6 +48,8 @@
     else{
         _head = _tail = node;
     }
+    
+    [_dic setValue:node forKey:node.key];
 }
 
 - (void)removeNode:(ZZLinkNode *)node{
@@ -53,6 +57,13 @@
     if (node.prev) node.prev.next = node.next;
     if (_head == node) _head = node.next;
     if (_tail == node) _tail = node.prev;
+    
+    [_dic removeObjectForKey:node.key];
+}
+
+- (void)removeAllNodes{
+    _head = _tail = nil;
+    [_dic removeAllObjects];
 }
 
 - (void)bringNodeToHead:(ZZLinkNode *)node{
@@ -86,36 +97,54 @@
 
 @interface ZZMemoryCache ()
 @property (strong , nonatomic) ZZLinkMap *linkMap;
+@property (strong , nonatomic) dispatch_queue_t queue;
 @end
 
 @implementation ZZMemoryCache
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _linkMap = [ZZLinkMap new];
+        _queue = dispatch_queue_create("com.zznetwork.cache.memory", DISPATCH_QUEUE_SERIAL);
+    }
+    return self;
+}
 
 - (NSObject *)objectCacheForKey:(NSString *)key{
-    ZZLinkNode *node = [self.linkMap.dic valueForKey:key];
+     ZZLinkNode *node = node = [self.linkMap.dic valueForKey:key];
     return node.value;
 }
 
 - (void)setCache:(NSObject *)value forKey:(NSString *)key{
-   ZZLinkNode *node = [self.linkMap.dic valueForKey:key];
-    CFTimeInterval curTime = [NSDate currentMediaTime];
-    if (node) {
-        node.time = curTime;
-        [_linkMap bringNodeToHead:node];
-    }
-    else{
-        node = [ZZLinkNode new];
-        node.time = curTime;
-        node.value = value;
-        [_linkMap insertNode:node];
+    dispatch_sync(_queue, ^{
+        ZZLinkNode *node = [self.linkMap.dic valueForKey:key];
+        CFTimeInterval curTime = [NSDate currentMediaTime];
+        if (node) {
+            node.time = curTime;
+            [_linkMap bringNodeToHead:node];
+        }
+        else{
+            node = [ZZLinkNode new];
+            node.time = curTime;
+            node.value = value;
+            [_linkMap insertNode:node];
+            
+            if (_capacity != NSIntegerMax) [self removeNodeByCapatity:_linkMap.dic.allKeys.count];
+        }
+    });
+}
+
+- (void)removeNodeByCapatity:(NSInteger )capatity{
+    if (capatity >_capacity) {
+        ZZLinkNode *node = _linkMap.tail;
+        [_linkMap removeNode:node];
     }
 }
 
-#pragma mark -- getters
-- (ZZLinkMap *)linkMap{
-    if (!_linkMap) {
-        _linkMap = [ZZLinkMap new];
-    }
-    return _linkMap;
+- (void)removeAllObjects{
+    dispatch_sync(_queue, ^{
+        [_linkMap removeAllNodes];
+    });
 }
-
 @end

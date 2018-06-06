@@ -11,8 +11,15 @@
 #import "WeatherApi.h"
 #import "ZZMemoryCache.h"
 #import "NSDate+ZZ.h"
+#import "ZZDiskCache.h"
+#import "ZZCache.h"
 
 @interface ViewController ()<ZZAsyRequestDelegate>
+{
+    NSLock *lock;
+    dispatch_semaphore_t signal;
+    NSConditionLock *conditionLock;
+}
 @end
 
 @implementation ViewController
@@ -31,14 +38,47 @@
         ZZRequest *req = [ZZRequest requestWithProto:[WeatherApi new] delegate:self];
         [req start];
     }
-    ZZMemoryCache *cache = [ZZMemoryCache new];
-    NSLog(@"start %f",[NSDate currentMediaTime]);
-    for (int i = 0; i <1000000; i++) {
-        [cache objectCacheForKey:@(i).stringValue];
+    ZZCache *cache = [ZZCache new];
+    cache.capacity = 5;
+    CFTimeInterval start = [NSDate currentMediaTime];
+    for (int i = 0; i <10000; i++) {
         [cache setCache:@(i) forKey:@(i).stringValue];
+        NSNumber *num = [cache objectCacheForKey:@(i).stringValue];
+        NSLog(@"object%@",num.stringValue);
     }
-    NSLog(@"end %f",[NSDate currentMediaTime]);
+    CFTimeInterval end = [NSDate currentMediaTime];
+    NSLog(@"interval %f",end-start);
+    
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        for (int i = 0; i <1000000; i++) {
+//            [cache objectCacheForKey:@(i).stringValue];
+//            [cache setCache:@(i) forKey:@(i).stringValue];
+//        }
+//    });
+//    
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        for (int i = 0; i <1000000; i++) {
+//            [cache objectCacheForKey:@(i).stringValue];
+//            [cache setCache:@(i) forKey:@(i).stringValue];
+//        }
+//    });
+//    
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        for (int i = 0; i <1000000; i++) {
+//            [cache objectCacheForKey:@(i).stringValue];
+//            [cache setCache:@(i) forKey:@(i).stringValue];
+//        }
+//    });
+//    
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        for (int i = 0; i <1000000; i++) {
+//            [cache objectCacheForKey:@(i).stringValue];
+//            [cache setCache:@(i) forKey:@(i).stringValue];
+//        }
+//    });
+   
 }
+
 
 - (void)didSendRequest:(ZZRequest *)request{
     NSLog(@"%@",NSStringFromSelector(_cmd));

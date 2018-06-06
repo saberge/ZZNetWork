@@ -20,7 +20,6 @@
 @property (strong , nonatomic) NSURLSessionDataTask *curSessionDataTask;
 @property (weak   , nonatomic) id<ZZAsyRequestDelegate > delegate;
 @property (assign , readwrite , nonatomic) BOOL fromCache;
-
 @end
 
 @implementation ZZRequest
@@ -38,7 +37,7 @@
     self.fromCache = NO;
     if (!_curProto) return;
     
-    NSObject *cache = [[ZZCache shareCache] objectCacheForKey:_curProto.identifier.MD5];
+    NSObject *cache = [[self cache] objectCacheForKey:_curProto.identifier.MD5];
     if (cache) {
          self.fromCache = YES;
         [self requestSuccess:nil response:cache];
@@ -123,7 +122,7 @@
     }
     if (!_fromCache) {
         [[ZZRequestPool sharePool] removeRequest:self];
-        [[ZZCache shareCache] setCache:responseObject forKey:_curProto.identifier.MD5];
+        [[self cache] setCache:responseObject forKey:_curProto.identifier.MD5];
     }
 }
 
@@ -147,6 +146,17 @@
         manager.responseSerializer = jsonResponseSerializer;
     });
     return manager;
+}
+
+- (ZZCache *)cache{
+    static dispatch_once_t once;
+    static ZZCache *cache;
+    dispatch_once(&once, ^ {
+        // defalut
+        //TODU: can config by user
+        cache = [ZZCache new];
+    });
+    return cache;
 }
 
 

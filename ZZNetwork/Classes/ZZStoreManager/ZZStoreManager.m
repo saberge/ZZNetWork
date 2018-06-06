@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "ZZKeyValueEntity+CoreDataProperties.h"
 #import "ZZKeyValueEntity+CoreDataClass.h"
+#import "NSDate+ZZ.h"
 
 #define kEntityName @"ZZKeyValueEntity"
 #define kModelName  @"ZZKeyValueDB"
@@ -24,14 +25,16 @@
 @implementation ZZStoreManager
 
 - (NSObject *)objectCacheForKey:(NSString *)key{
-    ZZKeyValueEntity *entity = [self searchWithKey:key];
+    ZZKeyValueEntity *entity = [self searchWithKey:key].firstObject;
     return entity.value;
 }
 
 - (void)setCache:(NSObject *)value forKey:(NSString *)key{
-    ZZKeyValueEntity *entity = [self searchWithKey:key];
+    NSAssert(value != nil, @"");
+    ZZKeyValueEntity *entity = [self searchWithKey:key].firstObject;
     if (entity) {
         entity.value = value;
+        entity.time = @([NSDate absoluteTimeGetCurrent]);
     }
     else{
         entity = [NSEntityDescription
@@ -39,28 +42,76 @@
                                       inManagedObjectContext:self.objectContext];
         entity.value = value;
         entity.key = key;
+        entity.time = @([NSDate absoluteTimeGetCurrent]);
     }
     
-    if ([self.objectContext hasChanges]) {
-        NSError *error = nil;
-        [self.objectContext save:&error];
-        NSAssert(error == nil, error.localizedFailureReason);
-    }
+    [self.objectContext performBlock:^{
+        if ([self.objectContext hasChanges]) {
+             NSError *error = nil;
+            [self.objectContext save:&error];
+            NSAssert(error == nil, error.localizedFailureReason);
+        }
+    }];
 }
 
-- (ZZKeyValueEntity *)searchWithKey:(NSString *)key{
-    // 设置过滤条件
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"key = %@",key];
-    NSFetchRequest *request = [ZZKeyValueEntity fetchRequest];
-    request.predicate = predicate;
-    // 执行获取操作，获取所有Student托管对象
-    NSError *error = nil;
-    NSArray<ZZKeyValueEntity *> *keyValues = [self.objectContext executeFetchRequest:request error:&error];
-    if (keyValues.count == 1) return keyValues.firstObject;
-    if (error) NSAssert(NO, error.localizedDescription);
-    if (keyValues.count >1) NSAssert(NO, @"查询多个值");
-    return nil;
+- (void)trimByCapatity:(NSInteger)capatity{
+    NSArray<ZZKeyValueEntity *> *keyValues = [self searchWithKey:nil];
+    for (NSInteger  i = keyValues.count-1;i >= 0;i--) {
+        if (i >= capatity-1) {
+            ZZKeyValueEntity *entity = keyValues[i];
+            [self.objectContext performBlockAndWait:^{
+                [self.objectContext deleteObject:entity];
+            }];
+        }else{
+            break;
+        }
+    }
+    
+    [self.objectContext performBlock:^{
+        if ([self.objectContext hasChanges]) {
+            NSError *error = nil;
+            [self.objectContext save:&error];
+            NSAssert(error == nil, error.localizedFailureReason);
+        }
+    }];
+}
 
+- (void)removeAllObjects{
+    NSArray<ZZKeyValueEntity *> *keyValues = [self searchWithKey:nil];
+    for (NSInteger  i = keyValues.count-1;i >= 0;i--) {
+            ZZKeyValueEntity *entity = keyValues[i];
+            [self.objectContext performBlockAndWait:^{
+                [self.objectContext deleteObject:entity];
+            }];
+    }
+    [self.objectContext performBlock:^{
+        if ([self.objectContext hasChanges]) {
+            NSError *error = nil;
+            [self.objectContext save:&error];
+            NSAssert(error == nil, error.localizedFailureReason);
+        }
+    }];
+}
+
+- (NSArray<ZZKeyValueEntity *> *)searchWithKey:(NSString *)key{
+    NSFetchRequest *request = [ZZKeyValueEntity fetchRequest];
+    // 设置过滤条件
+    if (key) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"key = %@",key];
+        request.predicate = predicate;
+    }
+    
+    NSSortDescriptor * sort = [NSSortDescriptor sortDescriptorWithKey:@"time" ascending:NO];
+    request.sortDescriptors = @[sort];
+    
+    __block NSError *error = nil;
+    __block NSArray<ZZKeyValueEntity *> *keyValues;
+    [self.objectContext performBlockAndWait:^{
+        keyValues = [self.objectContext executeFetchRequest:request error:&error];
+    }];
+    
+    NSAssert(error == nil, error.localizedDescription);
+    return keyValues;
 }
 
 #pragma mark --- getters ---
@@ -80,7 +131,7 @@
 
 - (NSManagedObjectContext *)objectContext{
     if (!_objectContext) {
-        _objectContext = [self contextWithType:NSMainQueueConcurrencyType coordinator:self.coordinator];
+        _objectContext = [self contextWithType:NSPrivateQueueConcurrencyType coordinator:self.coordinator];
     }
     return _objectContext;
 }

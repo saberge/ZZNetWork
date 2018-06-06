@@ -7,25 +7,33 @@
 //
 
 #import "ZZCache.h"
+#import <UIKit/UIKit.h>
 
 @interface ZZCache ()
 
 @end;
 
 @implementation ZZCache
-+ (instancetype)shareCache{
-    static dispatch_once_t once;
-    static ZZCache *cache;
-    dispatch_once(&once, ^ {
-        cache = [ZZCache new];
-    });
-    return cache;
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _memoryCache = [ZZMemoryCache new];
+        _diskCache = [ZZDiskCache new];
+        self.capacity = NSIntegerMax; // default
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(momeryWarning) name:UIApplicationDidReceiveMemoryWarningNotification object:nil];
+    }
+    return self;
 }
 
 - (NSObject *)objectCacheForKey:(NSString *)key{
     NSObject *cache = [self.memoryCache objectCacheForKey:key];
     if (cache) return cache;
-    return [self.diskCache objectCacheForKey:key];
+    cache = [self.diskCache objectCacheForKey:key];
+    // add to cache
+    if (cache) [self.memoryCache setValue:cache forKey:key];
+    return cache;
 }
 
 - (void)setCache:(NSObject *)value forKey:(NSString *)key{
@@ -33,18 +41,20 @@
     [self.diskCache  setCache:value forKey:key];
 }
 
-#pragma mark --- getters
-- (NSObject<ZZCacheProtocol> *)memoryCache{
-    if (!_memoryCache) {
-        _memoryCache = [ZZMemoryCache new];
+- (void)setCapacity:(NSInteger)capacity{
+    if (_capacity != capacity) {
+        _memoryCache.capacity =  capacity;
+        _diskCache.capacity = capacity;
+        _capacity = capacity;
     }
-    return _memoryCache;
 }
 
-- (NSObject<ZZCacheProtocol> *)diskCache{
-    if (!_diskCache) {
-        _diskCache = [ZZDiskCache new];
-    }
-    return _diskCache;
+- (void)momeryWarning{
+    [self.memoryCache removeAllObjects];
 }
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 @end

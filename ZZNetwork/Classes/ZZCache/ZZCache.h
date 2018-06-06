@@ -11,23 +11,18 @@
 #import "ZZDiskCache.h"
 #import "ZZCacheProtocol.h"
 /*
- 缓存
+ 必须使用shareCache 初始化。
+ memoryCache 内存缓存。
+ diskCache 磁盘缓存。
  */
 
-typedef NS_OPTIONS(NSUInteger, ZZCacheType) {
-    ZZCacheTypeNone                 = 0,
-    ZZCacheTypeMemory               = 1 << 1,
-    ZZCacheTypeDisk                 = 2 << 1,
-};
-
-@interface ZZCache : NSObject<ZZCacheProtocol>
+@interface ZZCache : NSObject
 
 #pragma mark ---cache
 @property (strong ,readwrite, nonatomic) NSObject<ZZCacheProtocol> *memoryCache;
 @property (strong ,readwrite, nonatomic) NSObject<ZZCacheProtocol> *diskCache;
-
-#pragma mark --- init
-+ (instancetype)shareCache;
+/* 缓存条目的个数容量，LRU移除。 default is NSIntegerMax */
+@property (assign , nonatomic) NSInteger capacity;
 
 #pragma mark --- manager
 - (NSObject *)objectCacheForKey:(NSString *)key;
