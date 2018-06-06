@@ -17,6 +17,7 @@
 @interface ZZMemoryCache : NSObject<ZZCacheProtocol>
 - (NSObject *)objectCacheForKey:(NSString *)key;
 - (void)setCache:(NSObject *)value forKey:(NSString *)key;
+- (void)removeCacheforKey:(NSString *)key;
 /* 缓存条目的个数容量，LRU移除。*/
 @property (assign , nonatomic) NSInteger capacity;
 

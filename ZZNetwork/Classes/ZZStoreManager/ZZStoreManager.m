@@ -93,6 +93,22 @@
     }];
 }
 
+- (void)removeCacheforKey:(NSString *)key{
+    
+    ZZKeyValueEntity *entity = [self searchWithKey:key].firstObject;
+    [self.objectContext performBlockAndWait:^{
+        [self.objectContext deleteObject:entity];
+    }];
+    
+    [self.objectContext performBlock:^{
+        if ([self.objectContext hasChanges]) {
+            NSError *error = nil;
+            [self.objectContext save:&error];
+            NSAssert(error == nil, error.localizedFailureReason);
+        }
+    }];
+}
+
 - (NSArray<ZZKeyValueEntity *> *)searchWithKey:(NSString *)key{
     NSFetchRequest *request = [ZZKeyValueEntity fetchRequest];
     // 设置过滤条件

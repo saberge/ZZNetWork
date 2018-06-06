@@ -38,6 +38,12 @@
     });
 }
 
+- (void)removeCacheforKey:(NSString *)key{
+    dispatch_sync(_queue, ^{
+        [self.storeManager removeCacheforKey:key];
+    });
+}
+
 - (void)removeAllObjects{
     dispatch_sync(_queue, ^{
         [self.storeManager removeAllObjects];

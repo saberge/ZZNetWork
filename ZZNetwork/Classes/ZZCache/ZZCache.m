@@ -37,8 +37,15 @@
 }
 
 - (void)setCache:(NSObject *)value forKey:(NSString *)key{
-    [self.memoryCache  setCache:value forKey:key];
-    [self.diskCache  setCache:value forKey:key];
+    if (!key)  return;
+    if (value) {
+        [self.memoryCache  setCache:value forKey:key];
+        [self.diskCache  setCache:value forKey:key];
+    }
+    else{
+        [self.memoryCache removeCacheforKey:key];
+        [self.diskCache removeCacheforKey:key];
+    }
 }
 
 - (void)setCapacity:(NSInteger)capacity{

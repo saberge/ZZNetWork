@@ -112,25 +112,33 @@
 }
 
 - (NSObject *)objectCacheForKey:(NSString *)key{
-     ZZLinkNode *node = node = [self.linkMap.dic valueForKey:key];
+    if (!key) return nil;
+    ZZLinkNode *node = node = [self.linkMap.dic valueForKey:key];
     return node.value;
 }
 
 - (void)setCache:(NSObject *)value forKey:(NSString *)key{
+    if (!key) return;
     dispatch_sync(_queue, ^{
         ZZLinkNode *node = [self.linkMap.dic valueForKey:key];
-        CFTimeInterval curTime = [NSDate currentMediaTime];
-        if (node) {
-            node.time = curTime;
-            [_linkMap bringNodeToHead:node];
+        if (!value) {
+            if (node) [self.linkMap removeNode:node];
         }
         else{
-            node = [ZZLinkNode new];
-            node.time = curTime;
-            node.value = value;
-            [_linkMap insertNode:node];
-            
-            if (_capacity != NSIntegerMax) [self removeNodeByCapatity:_linkMap.dic.allKeys.count];
+            CFTimeInterval curTime = [NSDate currentMediaTime];
+            if (node) {
+                node.time = curTime;
+                [_linkMap bringNodeToHead:node];
+            }
+            else{
+                node = [ZZLinkNode new];
+                node.time = curTime;
+                node.value = value;
+                node.key = key;
+                [_linkMap insertNode:node];
+                
+                if (_capacity != NSIntegerMax) [self removeNodeByCapatity:_linkMap.dic.allKeys.count];
+            }
         }
     });
 }
@@ -140,6 +148,10 @@
         ZZLinkNode *node = _linkMap.tail;
         [_linkMap removeNode:node];
     }
+}
+
+- (void)removeCacheforKey:(NSString *)key;{
+    [self setValue:nil forKey:key];
 }
 
 - (void)removeAllObjects{

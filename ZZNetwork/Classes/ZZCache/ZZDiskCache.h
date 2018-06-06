@@ -19,5 +19,6 @@
 
 - (NSObject *)objectCacheForKey:(NSString *)key;
 - (void)setCache:(NSObject *)value forKey:(NSString *)key;
+- (void)removeCacheforKey:(NSString *)key;
 - (void)removeAllObjects;
 @end
