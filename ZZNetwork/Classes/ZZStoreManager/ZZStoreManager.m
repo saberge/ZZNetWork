@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "ZZKeyValueEntity+CoreDataProperties.h"
 #import "ZZKeyValueEntity+CoreDataClass.h"
-#import "NSDate+ZZ.h"
+#import <ZZCategory/NSDate+ZZ.h>
 
 #define kEntityName @"ZZKeyValueEntity"
 #define kModelName  @"ZZKeyValueDB"

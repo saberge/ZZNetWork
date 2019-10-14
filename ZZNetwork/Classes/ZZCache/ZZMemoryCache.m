@@ -7,8 +7,8 @@
 //
 
 #import "ZZMemoryCache.h"
-#import "NSDate+ZZ.h"
 #import <pthread.h>
+#import <ZZCategory/NSDate+ZZ.h>
 
 #pragma mark --- linkNode
 @interface ZZLinkNode:NSObject

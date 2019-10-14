@@ -9,7 +9,7 @@
 #import "ZZRequestPool.h"
 #import "ZZRequest.h"
 #import "ZZProtocol.h"
-#import "NSString+ZZ.h"
+#import <ZZCategory/NSString+ZZ.h>
 
 @interface ZZRequestPool ()
 @property (strong , nonatomic) NSMutableDictionary *cacheDic;
