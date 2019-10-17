@@ -17,7 +17,6 @@
 #import "ZZBaseApi.h"
 #import "ZZBaseReponse.h"
 
-
 @interface ZZRequest ()
 @property (strong , nonatomic) NSObject<ZZProtocol> *curProto;
 @property (strong , nonatomic) NSURLSessionDataTask *curSessionDataTask;
