@@ -16,11 +16,11 @@
          2. inherit ZZBaseApi
  */
 @interface ZZBaseApi : NSObject<ZZProtocol>
-@property (strong ,readonly , nonatomic) NSDictionary *parameters;
-@property (strong ,readonly , nonatomic) NSDictionary *headers;
-@property (copy   ,readonly , nonatomic) NSString     *path;
-@property (assign ,readonly , nonatomic) ZZHTTPMethod  httpMethod; //ZZHTTPMethodGet for default
-@property (copy   ,nonatomic) MultipartBlock multipartBlock;
-@property (assign ,readonly , nonatomic) Class <ZZReponse> responseModelClass;
+@property (strong , nonatomic) NSDictionary *parameters;
+@property (strong , nonatomic) NSDictionary *headers;
+@property (copy   , nonatomic) NSString     *path;
+@property (assign , nonatomic) ZZHTTPMethod  httpMethod; //ZZHTTPMethodGet for default
+@property (copy   , nonatomic) MultipartBlock multipartBlock;
+@property (assign , nonatomic) Class <ZZReponse> responseModelClass;
 
 @end

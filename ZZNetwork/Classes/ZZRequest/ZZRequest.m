@@ -14,6 +14,9 @@
 #import "ZZCache.h"
 #import "ZZProtocol.h"
 #import <ZZCategory/NSString+ZZ.h>
+#import "ZZBaseApi.h"
+#import "ZZBaseReponse.h"
+
 
 @interface ZZRequest ()
 @property (strong , nonatomic) NSObject<ZZProtocol> *curProto;
@@ -30,6 +33,16 @@
     request.curProto = proto;
     request.delegate = delegate;
     return request;
+}
+
++ (instancetype)requestWithPath:(NSString *)path para:(NSDictionary *)paras method:(ZZHTTPMethod)mehod modelClass:(id<ZZReponse>)modelClass delegate:(id<ZZAsyRequestDelegate>)delegate
+{
+    NSParameterAssert(path);
+    ZZBaseApi *api = [ZZBaseApi new];
+    api.parameters = paras;
+    api.httpMethod = mehod;
+    api.responseModelClass = modelClass;
+    return [self requestWithProto:api delegate:delegate];
 }
 
 - (void)start{
