@@ -96,6 +96,7 @@
 - (void)removeCacheforKey:(NSString *)key{
     
     ZZKeyValueEntity *entity = [self searchWithKey:key].firstObject;
+    if (!entity) return;
     [self.objectContext performBlockAndWait:^{
         [self.objectContext deleteObject:entity];
     }];

@@ -16,9 +16,10 @@
 
 @class ZZRequest;
 @protocol ZZAsyRequestDelegate <NSObject>
+@optional
 - (void)didSendRequest:(ZZRequest *)request;
 - (void)didReciveData:(id)data request:(ZZRequest *)request;
-- (void)didFailure:(NSError *)error request:(ZZRequest *)reqeust;
+- (void)didFailure:(NSError *)error request:(ZZRequest *)request;
 @end
 
 @interface ZZRequest : NSObject

@@ -32,7 +32,7 @@
     if (cache) return cache;
     cache = [self.diskCache objectCacheForKey:key];
     // add to cache
-    if (cache) [self.memoryCache setValue:cache forKey:key];
+    if (cache) [self.memoryCache setCache:cache forKey:key];
     return cache;
 }
 

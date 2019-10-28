@@ -22,6 +22,8 @@ typedef enum : NSUInteger {
 @property (strong ,readonly , nonatomic) NSDictionary *parameters;
 @property (strong ,readonly , nonatomic) NSDictionary *headers;
 @property (copy   ,readonly , nonatomic) NSString     *path;
+@property (strong ,readonly , nonatomic) NSString *correctCode; //default 0000
+@property (assign ,readonly , nonatomic) BOOL needCache; //default Yes
 
 /*
  identifier 用于cache 协议的标识

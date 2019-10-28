@@ -7,11 +7,12 @@
 //
 
 #import "ZZBaseApi.h"
+#import <YYModel/NSObject+YYModel.h>
 
 @implementation ZZBaseApi
 
 - (ZZHTTPMethod)httpMethod{
-    return ZZHTTPMethodGet;
+    return ZZHTTPMethodPost;
 }
 
 - (NSDictionary *)parameters{
@@ -21,6 +22,8 @@
 - (NSDictionary *)headers{
     return @{};
 }
+- (BOOL)needCache{return YES;}
+- (NSString *)correctCode {return @"0";}
 
 - (NSString *)identifier{
     return [NSString stringWithFormat:@"%@:%@:%@",NSStringFromClass(self.class), [self.parameters.allKeys componentsJoinedByString:@"-"],[self.parameters.allValues componentsJoinedByString:@"-"]];

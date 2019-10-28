@@ -16,6 +16,8 @@
 #import <ZZCategory/NSString+ZZ.h>
 #import "ZZBaseApi.h"
 #import "ZZBaseReponse.h"
+#import <ZZCategory/NSDictionary+ZZ.h>
+#import "ZZRequestHander.h"
 
 @interface ZZRequest ()
 @property (strong , nonatomic) NSObject<ZZProtocol> *curProto;
@@ -49,11 +51,14 @@
     self.fromCache = NO;
     if (!_curProto) return;
     
-    NSObject *cache = [[self cache] objectCacheForKey:_curProto.identifier.MD5];
-    if (cache) {
-         self.fromCache = YES;
-        [self requestSuccess:nil response:cache];
+    if ([_curProto needCache]) {
+        NSObject *cache = [[self cache] objectCacheForKey:_curProto.identifier.MD5];
+        if (cache) {
+            self.fromCache = YES;
+            [self requestSuccess:nil response:cache];
+        }
     }
+   
     self.fromCache = NO;
     if ([[ZZRequestPool sharePool] containReqeust:self]) return;
     [[ZZRequestPool sharePool] addRequest:self];
@@ -78,6 +83,10 @@
 - (NSURLSessionDataTask *)sendAFRequestProto:(NSObject<ZZProtocol> *)proto{
     NSURLSessionDataTask *sessionDataTask = nil;
     AFHTTPSessionManager *manager = [self shareRequestManger];
+    for (NSString *key in proto.headers) {
+        [manager.requestSerializer setValue:proto.headers[key] forHTTPHeaderField:key];
+    }
+    
     NSDictionary *parameters = proto.parameters;
     NSString *url = proto.path;
     ZZHTTPMethod method = proto.httpMethod;
@@ -125,6 +134,27 @@
 
 - (void)requestSuccess:(NSURLSessionDataTask *)task response:(id  _Nullable )responseObject{
     id resonse = responseObject;
+    if (![responseObject isKindOfClass:NSDictionary.class]) {
+        NSError *error = [NSError errorWithDomain:NSStringFromClass(self.class) code:-666666 userInfo:@{NSLocalizedFailureReasonErrorKey:@"返回数据错误"}];
+        [self requestFailure:_curSessionDataTask error:error];
+        return;
+    }
+    
+    NSDictionary *resDic = (NSDictionary *)responseObject;
+    NSString *code =  [resDic stringValueForKey:@"code"];
+    NSString *msg = [resDic stringValueForKey:@"msg"];
+    if ([ZZRequestHander shareInstance].ZZRequestHanderBlock(code.integerValue, resDic)) {
+        if (!_fromCache) {
+            [[ZZRequestPool sharePool] removeRequest:self];
+        }
+        return;
+    }
+    
+    if (![code isEqualToString:_curProto.correctCode]) {
+        NSError *error = [NSError errorWithDomain:NSStringFromClass(self.class) code:-666666 userInfo:@{NSLocalizedFailureReasonErrorKey:msg?:@"请求错误，请稍后再试"}];
+        [self requestFailure:_curSessionDataTask error:error];
+        return;
+    }
     
     if (_curProto.responseModelClass) {
         resonse = [_curProto.responseModelClass zz_modelWithDictionary:responseObject];
@@ -134,7 +164,9 @@
     }
     if (!_fromCache) {
         [[ZZRequestPool sharePool] removeRequest:self];
-        [[self cache] setCache:responseObject forKey:_curProto.identifier.MD5];
+        if ([_curProto needCache]) {
+            [[self cache] setCache:responseObject forKey:_curProto.identifier.MD5];
+        }
     }
 }
 

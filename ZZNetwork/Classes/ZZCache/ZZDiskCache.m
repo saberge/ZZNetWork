@@ -32,10 +32,14 @@
 }
 
 - (void)setCache:(NSObject *)value forKey:(NSString *)key{
-    dispatch_sync(_queue, ^{
-        [self.storeManager setCache:value forKey:key];
-        if (_capacity != NSIntegerMax) [self.storeManager trimByCapatity:_capacity];
-    });
+    if (value) {
+        dispatch_sync(_queue, ^{
+            [self.storeManager setCache:value forKey:key];
+            if (_capacity != NSIntegerMax) [self.storeManager trimByCapatity:_capacity];
+        });
+    }else{
+        [self removeCacheforKey:key];
+    }
 }
 
 - (void)removeCacheforKey:(NSString *)key{

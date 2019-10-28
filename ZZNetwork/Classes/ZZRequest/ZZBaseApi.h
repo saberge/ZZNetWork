@@ -15,6 +15,11 @@
          1. conform ZZProtocol
          2. inherit ZZBaseApi
  */
+
+typedef NSArray *(^ZZCustomRespProcessBlock)(id response);
+
+static ZZCustomRespProcessBlock customRespProcessBlock;
+
 @interface ZZBaseApi : NSObject<ZZProtocol>
 @property (strong , nonatomic) NSDictionary *parameters;
 @property (strong , nonatomic) NSDictionary *headers;
@@ -22,5 +27,7 @@
 @property (assign , nonatomic) ZZHTTPMethod  httpMethod; //ZZHTTPMethodGet for default
 @property (copy   , nonatomic) MultipartBlock multipartBlock;
 @property (assign , nonatomic) Class <ZZReponse> responseModelClass;
+
+//+ (void)configCustomProcessBlock:(ZZCustomRespProcessBlock )block;
 
 @end
